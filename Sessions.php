@@ -42,10 +42,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                     <th>&nbsp;</th>
 										<th>Date  </th>
 										<th>&nbsp;</th>
-										<th>Stautes </th>
-										<th>&nbsp;</th>
-										<th>Action </th>
-										<th>&nbsp;</th>
+							
                 </tr>
             </thead>
             <tbody>
@@ -53,13 +50,13 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 						
 							require 'connection.php';
 							//select from tasks db where student = session cookie
-								$query= 'SELECT * FROM  `booking` WHERE `tutor`= "'.$_SESSION['Username'].'"';
+								$query= 'SELECT * FROM  `booking` WHERE `StudentUser`= "'.$_SESSION['Username'].'"';
 								$results = mysqli_query($connect, $query);
 									if ($results)
 										{ //if the query is uccessful then do this.
 											while ($row = mysqli_fetch_assoc($results))
 											{
-												$tutor= $row['tutor'];
+												$tutor= $row['StudentUser'];
 												$fn= $row['First'];
 												$ln = $row['Last'];
 												$meetplace = $row['location'];
@@ -82,10 +79,8 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 														<td class = "task"><?php echo $date;?> </td>
 														<td> &nbsp;</tb>
 
-															<td class = "colr" id= "color">pending</td>
-
-<td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
-                 <td class="tick" id ="tick"> <a href='#'> &#10004; </a></td>
+														 
+ 
              </tr>
 
 
@@ -100,26 +95,4 @@ if($_SESSION['login'] != "That GRRRRREAT") {
      </div> 
     </div>  
     </body>
-<script>
-$(document).ready(function(){
-
-    $('.deletes').css({color:'green'});
-        $('.tick').css({color:'red'});
-    $(".colr").css({color:'orange'});
-
-});
-
-    $(".tick").click(function()
-    {
-        var colors = $(this).data('colr');
-        $("#color").text("accept");
-          // $(".colr").text().replace("pending", "Accept");
-     $("#color").css("color","green");
-
-        //$(this).css("color", "green");
-    });
-
-
-
-    </script>
-</html>
+ </html>

@@ -27,7 +27,9 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 											<li class="ButtonPAdding">	<a href='https://dle.plymouth.ac.uk' class="btn btn-primary form-control">DLE</a></li>
 											<li class="ButtonPAdding">	<a href='https://www.fotpms.plymouth.ac.uk/SPMS/' class="btn btn-primary form-control">SPMS</a></li>
 										<li class="ButtonPAdding">	<a href='https://outlook.office.com/owa/?wa=wsignin1.0' class="btn btn-primary form-control">University Email</a></li>
-												<li class="ButtonPAdding"><a href='Sessions.php' class="btn btn-primary form-control"> Appointments</a></li>											 
+												<li class="ButtonPAdding"><a href='books.php' class="btn btn-primary form-control">See booking</a></li>
+												<li class="ButtonPAdding"><a href='Students.php' class="btn btn-primary form-control"> Students</a></li>		
+											 s											 
 									</ul>
 								</div>
         <div class= "col-sm-9">

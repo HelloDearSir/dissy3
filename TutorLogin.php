@@ -1,6 +1,6 @@
 <?php
 
-require 'php/log.php';
+require 'php/tutorlog.php';
 
 ?>
 
@@ -34,7 +34,7 @@ require 'php/log.php';
 
  <h3>Existing users  </h3>
 
-    <form action="login.php" method="post">
+    <form action="TutorLogin.php" method="post">
 
         <fieldset>
 
@@ -67,10 +67,8 @@ require 'php/log.php';
 <div class="col-xs-12 col-md-6">
 
 <h3> Not Registered?</h3>
-
-<p> If  you are a student and don't have a log in please <a href="sign_up.php">Click here</a>     </p>
-
-<a class= "btn btn-default btn-primary form-control" href="sign_up.php">Sign up</a>
+<p> If you are a tutor and don't have a log in please <a href="TutorSign_up.php"> Sign up</a>
+<a class= "btn btn-default btn-primary form-control" href="TutorSign_up.php">Sign up</a>
 
 
     </div>

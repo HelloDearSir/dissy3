@@ -11,7 +11,9 @@ if (isset($_POST['submit'])) {
     $location = $_POST['location'];
     $dates = $_POST['bookingd'];
     $time = $_POST['time'];
-        $query = "INSERT INTO booking(first, Last, Phone,location, tutor,bookingd,time) VALUES('$student', '$last', '$phone',  '$location', '$tutor', '$dates', '$time' )";
+    $times = $_POST['timz'];
+    $studentusername =$_POST['Sname'];
+        $query = "INSERT INTO booking(first, Last, StudentUser, Phone, location, tutor,bookingd,time,timends) VALUES('$student', '$last','$studentusername', '$phone',  '$location', '$tutor', '$dates', '$time','$times')";
     $results = mysqli_query($db, $query);
 //if !$run_query is true then echo this error.
     if($results) {
