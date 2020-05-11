@@ -4,7 +4,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	header('Location: login.php');
 	exit();
 } else {
-	$username = $_SESSION['Username'];
+	$username = $_SESSION['username'];
 }
 ?>
 
@@ -29,7 +29,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 										<li class="ButtonPAdding">	<a href='https://outlook.office.com/owa/?wa=wsignin1.0' class="btn btn-primary form-control">University Email</a></li>
 												<li class="ButtonPAdding"><a href='books.php' class="btn btn-primary form-control">See booking</a></li>
 												<li class="ButtonPAdding"><a href='Students.php' class="btn btn-primary form-control"> Students</a></li>		
-											 s											 
+											 		 
 									</ul>
 								</div>
         <div class= "col-sm-9">
@@ -67,7 +67,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 require 'tasks.php';
 require 'connection.php';
 //select from tasks db where student = session cookie
-	$query= 'SELECT * FROM  `tasks` WHERE `student`= "'.$_SESSION['Username'].'"';
+	$query= 'SELECT * FROM  `tasks` WHERE `student`= "'.$_SESSION['username'].'"';
 	$results = mysqli_query($connect, $query);
 		if ($results)
 			{ //if the query is uccessful then do this.
@@ -75,7 +75,7 @@ require 'connection.php';
 				{
 					$student= $row['student'];
 					$task= $row['task'];
-					if($student == $_SESSION['Username'])
+					if($student == $_SESSION['username'])
 					{ ?>
 						<tr>
 							<td class= "task"> <?php echo $task; ?></td>

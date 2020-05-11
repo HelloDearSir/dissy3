@@ -13,12 +13,13 @@ if (isset($_POST['submit'])) {
     $time = $_POST['time'];
     $times = $_POST['timz'];
     $studentusername =$_POST['Sname'];
-        $query = "INSERT INTO booking(first, Last, StudentUser, Phone, location, tutor,bookingd,time,timends) VALUES('$student', '$last','$studentusername', '$phone',  '$location', '$tutor', '$dates', '$time','$times')";
+    $TutorAviable= $_POST['available'];
+        $query = "INSERT INTO booking(first, Last, StudentUser, Phone, location, tutor,bookingd,time,timends,status) VALUES('$student', '$last','$studentusername', '$phone',  '$location', '$tutor', '$dates', '$time','$times','$TutorAviable')";
     $results = mysqli_query($db, $query);
 //if !$run_query is true then echo this error.
     if($results) {
             //echo that it worked
-            	header("Location: book.php");
+            	header("Location: Sessions.php");
       //  echo 'QUERY ok<br />';
 
     } else {
@@ -34,7 +35,18 @@ if(isset($_GET['del_task']))
     header('location:books.php');
 }
 //selecting the db and using tasks to not reuse the task thats already been used to store the data.
-$booking = mysqli_query($db, "SELECT * FROM booking");
 
 
-?>
+ 
+ 
+if(isset($_POST['accpetd'])) {
+  $id = $_POST['ids'];
+ 
+  if(!empty($id)) {
+  mysqli_query($db, "UPDATE booking SET statues = 'test' WHERE id ='{$id}' ");
+  }
+          } 
+
+
+
+ 

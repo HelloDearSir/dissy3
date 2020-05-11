@@ -1,197 +1,59 @@
-
+@import 'menu.css';
 
 #container
+
 {
-    color: black;
-    position: relative;
-    top: 150px;
-    left: 500px;
-  font-size:30px;
-box-shadow: 1px 3px 6px #dfdccd;
-    border-radius: 3px;
-    width: 35%;
-background-color: #edece8;
+   box-shadow:2px 2px 10px #000000;
+	width:1200px;
+ height:90%;
+margin:2% auto;
+border-radius: 1%;
 overflow:hidden;
-font-family: Arial;
-
+ position: relative;
+top: -10px;
+    
+    
 }
 
- 
-#list
-{
-  position: relative;
-  left: 50px;
-  top:-35px;
-}
-#btn
-{
-  left:150px;
-}
- 
- 
-p
+#logs 
 {
     position: relative;
-    left: 150px;
-
-}
-button a
-{
-    color:black;
-}
-
-
-@import 'moblie.css';
-
-
-
- 
-
-
-.welcome
-{
-     position: relative;
-    top: 100px;
-    left: 250px;
-}
-#para
-{
-  position: relative;
-    top: 150px;
-    left: 250px;
-}
- 
-
-.nav
-{
-  border-bottom: 4px solid #00009a;
-  height: 70px;
-  line-height: 70px;
-    z-index: 1;
-
-}
-.menu
-{
-  margin: 0 30px 0 0;
-
-  position: relative;
-     text-align:right;
-  list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: white ;
-   position: fixed;
-    top: 0;
-    right:0;
-    width: 100%;
-
-    font-family:  sans-serif;
-}
- 
-#toggle
-{
-  display: none;
-
-}
-
-.menu a
-{
-  text-decoration: none;
-  margin: 0 10px;
-  line-height: 70px;
-  color:  	#00009a;
-     transition: border .5s;
-}
-body
-{
-  margin:0;
-   padding:0;
-    background: #6969;
-}
- 
-
-
-
-@media only screen and (min-width: 360px) and (max-width: 500px) and (max-height:812px)
-{
-    body
-    {
-        overflow: none;
-    }
-#container
-    {
-       position: relative;;
-        left:50px;
-        width:70%;
-        height: 27%;
-        font-size: 20px;
-    }
-
- 
-     .user
-    {
-        left:3px;
-        position: relative;
-        top:-20px;
-    }
-
-    #signup
-    {
-        position: relative;
-        top:-46px;
-        left: 170px;
-    }
- 
-  .menu{
-    text-align: center;
-    width:100px;
-    display: none;
-    position: absolute;
-    left: 0;
-    top:0px;
-      height: 100%;
-      z-index: 1;
-     overflow: none;
-  }
-  .menu a {
-    display: block;
-    border-bottom: 4px solid #0000cd;
-    margin-top:30px;
-      padding : 0 ;
-
-  }
-  #toggle:checked + .menu
-  {
-    display:block;
-  }
-
-
-  li {
-    text-align: left;
-    font-size: 10px;
-    list-style: none;
-    margin: 0;
-  }
+    left: 350px;
+    top:205px;
     
-    #signup
-    {
-        position: relative;
-        left:150px;
-        top:-60px;
-    }
-    #login
-    {
-        position: relative;
-        left:50px;
-    }
-    #titles
-    {
-        position: relative;
-        left:50px;
-    }
-    .user
-    { display: none;
+}
+form 
+{
+    position: relative;
+    left:350px;
+   top: 230px;
+    
+    
+}
+h1
+{
+    position: relative;
+    top: 100px;
+    left:300px;
+    
+}
+input
+{
+    border-top-left-radius: 4px;
+    margin: 4px 10px 10px;
+    padding: 5px 20px;
+}
 
-    }
+html, body
+{
+    margin: 0px auto;
+    overflow:hidden;
+}
+
+img
+{
+    width:50px;
+    height: 50px;
+    position: relative;
+    top:-200px;
 }

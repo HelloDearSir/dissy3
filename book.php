@@ -77,7 +77,7 @@
   <td>
   <select  name="tutor" class="col-12"> 
                                     <option size= "" type="text" class=" text form-control"> </option>
-                                    <option size= "" type="text" class=" text form-control" value="Micky_rowe">Micky_Rowe  </option>
+                                    <option size= "" type="text" class=" text form-control" value="Micky_Rowe">Micky_Rowe</option>
                                     <option size= "" type="text" class=" text form-control"   value="John_Doe">John_Doe  </option>
                                     <option size= "" type="text" class=" text form-control" value="Elizabeth_Burrows">Elizabeth_Burrows </option>
                                     <option size= "" type="text" class=" text form-control"   value="Aidan_Glover"> Aidan_Glover  </option>
@@ -128,6 +128,13 @@ Session End:
 </td>
 </td>
   </tr>
+     <td> 
+      <div class="availablive">
+      <select name="available">
+      <option size= "" type="text" class=" text form-control"   value="pending" >pending </option>
+      </select>
+      </div>
+      </td>
   <div class="next loginbutton">
    <button type="submit" class="button" name="submit">Book</button>
    

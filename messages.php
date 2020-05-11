@@ -4,7 +4,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	header('Location: login.php');
 	exit();
 } else {
-	$username = $_SESSION['Username'];
+	$username = $_SESSION['username'];
 }
 ?>
 <!DOCTYPE html>
@@ -38,10 +38,10 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	        every time user='.$Ureciver it would show each different message when the user has sent a new message to a user.
 
 			*/
-					$query= 'SELECT * FROM  `chat` WHERE `messager`= "'.$_SESSION['Username'].'"
+					$query= 'SELECT * FROM  `chat` WHERE `messager`= "'.$_SESSION['username'].'"
 					AND `messagee` ="'.$_GET['user'].'"
 					OR `messager` = "'.$_GET['user'].'"
-					AND `messagee` = "'.$_SESSION['Username'].'" ';
+					AND `messagee` = "'.$_SESSION['username'].'" ';
 					$results = mysqli_query($connect, $query);
 							if ($results)
 								{ //if the query is successful then do this.
@@ -55,10 +55,10 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	  									$Ureciver= $row['messagee'];
 	  									$message = $row['msg'];
 	        //checking the sender is the user from the seesion.
-	  					if($user_sender == $_SESSION['Username'])
+	  					if($user_sender == $_SESSION['username'])
 	  					{ ?>
 	    				<div class="users">
-	      				<p> <?php echo $_SESSION['Username']; ?></p>
+	      				<p class="Main"><b> <?php echo $_SESSION['username']; ?></b></p>
 	      					<p> <?php echo $message ?></p>
 	    						</div>
 	    								<?php
@@ -69,7 +69,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	            // this echo will post the $message that that the sender has sent them.
 	    												?>
 	    			<div class="recivers">
-	       	         	<p><?php echo $user_sender; ?> </p>
+	       	         	<p class="Mains "><b><?php echo $user_sender; ?> </b></p>
 	       			<p><?php echo $message ?></p>
 	     				</div>
 	     					<?php
@@ -81,11 +81,12 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 		   <div class="container">
 		   <div class="row">
 		     <?php require 'test.php' ?>
-			<div class="col-md-3">
+			<div class="col-md-2">
 			</div>
-			<div class=" col-12 col-md-9">
+			<div class=" col-12 col-md-10">
 				<form method="post" id = "msgbox">
 					<input type= "text" class="minputs" name="nmesss" id = "minputs" placeholder="write the message">
+					<input type="submit" name="submit" value="Send"  class= "btn-primary">
 				</form>
 											</div>
 	  			</div>
@@ -94,5 +95,33 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 										 </div>
 							</div>
 </body>
+<script>
+$("document").ready(function(event) 
+{
+	//now if the fomr is sumbitted 
+	$("#rightside").on('submit', 'msg', function(){
+		//take the data from input 
+   var message_text = $("minput").val();
+		//post it to sned.php 
+   $.post("send.php?user=<?php echo$_GET['user']?>",
+   { text:message_text,
+	
+   },
+   function(data,status)
+   {
+	   alert(data);
+   }
+	
+	});
+	$("#rightside").keypress(function(e))
+	{
+				 //sumbits when enter is only pressed 
+     if(e.keyCode ==13 && !e.shiftKey)
+	 {
+		 $("msgbox").submit();
 
+	 }
+	}
+});
+</script>
 </html>

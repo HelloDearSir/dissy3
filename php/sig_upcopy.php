@@ -7,9 +7,9 @@
      
        
         // $query = "SELECT * FROM c9 WHERE Username=$new_user ";
-        $hashed = hash('sha512', $new_pass);
+       
 		$insert = "INSERT INTO tutor (Username, Password)
-				   VALUES ('$new_user', '$hashed')";
+				   VALUES ('$new_user', '$new_pass')";
           $results = mysqli_query($connect, $insert);
 		if($results){
 		session_destroy();

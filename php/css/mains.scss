@@ -1,0 +1,206 @@
+
+body 
+{
+    overflow-x: hidden;
+}
+
+.loginbutton
+{
+    padding-top:15px;
+}
+
+.ButtonPAdding
+{
+    padding-top:10px;
+    list-style-type:none;
+}
+ 
+.Paddingfam 
+{
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.navbar 
+{
+    background:#fffdd0 ;
+
+    .navbar-nav
+    {
+        .nav-link
+        {
+            color:#00008b;
+        }
+    }
+}
+
+
+.btn-primary
+{
+    background:#fffdd0;
+    color:#00008b;
+    
+}
+
+.WrongData{
+    position: absolute;
+    top: 56%;
+    left: 14%;
+    color: red;
+    }
+
+    /* New message box */
+    #newcontact 
+    {
+        box-shadow: 2px 10px 30px;
+        position: fixed;
+        top: 20%;
+        background: white;
+        z-index:1;
+        left:50%;
+        font-family: newfont;
+            /*transform is x,y.*/
+            transform: translate(-300px,0);
+            border-radius: 5px;
+            overflow: auto;
+            display: none;
+        width: 50em;
+    
+
+        .header
+        {
+            font-size :50px;
+            text-align: center;
+        }
+        .header, .footer
+{
+	background: #6969; margin:0px;
+	color:white;
+	padding:5px;
+}
+
+.body
+{
+	padding:5px;
+}
+
+    }
+
+    @media (max-width:767px)
+    {
+      #msgbox
+    {
+            position: relative;
+     
+             left: -8%; 
+            height: 30%;
+    }
+    }
+
+    @media (max-width:991px)
+{
+  #newcontact 
+  {
+    width: 75%;
+    left:55%;
+    overflow-x: hidden;
+  }
+}
+
+/*For the table */
+table
+{
+    position: relative;
+    top:150px;
+	width:50%;
+	margin:30px auto;
+	border-collapse: collapse;
+     border-radius: 10%;
+    background-color: white;
+ 
+tr
+
+{
+    border-bottom:1px solid #cbcbcb;
+    &:hover
+    {
+        background:#e9e9e9;
+    }
+}
+th
+{
+	font-size:19px;
+	color:#6b8e23;
+    text-align: left;
+}
+#ls
+{
+    position: relative;
+    left: 300px;
+}
+th, td
+{
+	border:none;
+	height: 30px;
+	padding:2px;
+     text-align: left;
+}
+
+ 
+
+.delete, .tick
+{
+	text-align: center;
+    position: relative;
+	left: 10px;
+}
+ /* Deleting  styling*/
+.delete a
+{
+	color:white;
+	background:red;
+	padding: 1px 6px;
+	border-radius: 3px;
+	text-decoration: none;
+	width:10px;
+}
+/* tick styling*/
+
+.tick a
+{
+    color:white;
+	background:green;
+	padding: 1px 6px;
+	border-radius: 3px;
+	text-decoration: none;
+	width:10px;
+}
+
+}
+.tablez,.SessionTable
+{
+    position: initial !important;
+.tables {
+    position: initial !important;
+.tasksnames
+{
+    position: initial !important;
+}
+.taskdelete 
+{
+    position: inherit !important;
+    left:0 !important;
+    text-align: initial !important;
+}
+}
+}
+
+.availablive
+{
+    display:none !important;
+}
+
+.recivers .Main p, .users .Mains p
+{
+    font-weight: bold;
+}

@@ -7,9 +7,9 @@
 			
 
         // $query = "SELECT * FROM c9 WHERE Username=$new_user ";
-        $hashed = hash('sha512', $new_pass);
+        
 		$insert = "INSERT INTO tutor(Username, Password)
-				   VALUES ('$new_user', '$hashed' )";
+				   VALUES ('$new_user', '$new_pass' )";
           $results = mysqli_query($connect, $insert);
 		if($results){
 		session_destroy();
@@ -18,32 +18,27 @@
 			}
 ?>
 
-
+<!doctype html>
 <html>
-<head>
-
-    <meta charset="utf-8">
-<link rel="stylesheet" a href="css/log.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Sign up </title>
-</head>
+ 
+<?php require 'meta.php' ?>
+  
 <body>
-	<ul>
+<?php require 'header.php' ?>
+ 
+	<div class= "container">
+	  <div class="row">
+          <h1 class="col-xs-12"> Sign Up  </h1>
+        </div>
+            </div>
 
-	 <li style="float:right" ><a href="FAQ.html">FAQ</a></li>
-
-	<li><a href="sign_up.php">Register </a></li>
-	    <li><a href="login.php">Log In</a></li>
-	    <li  ><a href="index.php">Home</a></li>
-
-
-	</ul>
-      <div id= "container">
-      <h1 id= "logtitle"> Sign Up  </h1>
-
-
-	<div id="form">
-				 	<form action="sign_up.php" method="post">
+        <div class="container">
+         <div class="row">
+          <div class=" LoginBoxContainer col-xs-12 col-md-6">
+		  <form action="sign_upTutor.php" method="post">
+                            <fieldset>
+                             
+	 
 					<table>
 						<tr>
 							<td align= "right">

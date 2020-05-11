@@ -4,7 +4,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	header('Location: login.php');
 	exit();
 } else {
-	$username = $_SESSION['Username'];
+	$username = $_SESSION['username'];
 }
 ?>
 
@@ -27,7 +27,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                                 <div id = "filter"></div>
                                 </div>
                                 </div>
-        <table class="table">
+        <table class="table SessionTable">
             <thead>
                 <tr>
                     <th>First Name </th>
@@ -38,35 +38,42 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                     <th>&nbsp;</th>
                     <th> Location </th>
                     <th>&nbsp;</th>
-                    <th>Time </th>
+                    <th>Time Start </th>
                     <th>&nbsp;</th>
-										<th>Date  </th>
+                    <th>Time End</th> 
+                    <th>&nbsp;</th>
+                    <th>Date  </th>
 										<th>&nbsp;</th>
-										<th>Stautes </th>
+                    <th>Status  </th>
 										<th>&nbsp;</th>
-										<th>Action </th>
-										<th>&nbsp;</th>
+              
+							
                 </tr>
             </thead>
             <tbody>
 							<?php
-						
-							require 'connection.php';
+						require 'booking.php';
+                            require 'connection.php';
+                            
 							//select from tasks db where student = session cookie
-								$query= 'SELECT * FROM  `booking` WHERE `tutor`= "'.$_SESSION['Username'].'"';
+								$query= 'SELECT * FROM  `booking` WHERE `tutor`= "'.$_SESSION['username'].'"';
 								$results = mysqli_query($connect, $query);
 									if ($results)
 										{ //if the query is uccessful then do this.
 											while ($row = mysqli_fetch_assoc($results))
 											{
+                        
 												$tutor= $row['tutor'];
 												$fn= $row['First'];
 												$ln = $row['Last'];
 												$meetplace = $row['location'];
-												$time = $row['time'];
+                        $time = $row['time'];
+                        $timeEnds =$row['timends'];
 												$date = $row['bookingd'];
-												$phonen = $row['Phone'];
-												if($tutor == $_SESSION['Username'])
+                        $phonen = $row['Phone'];
+                        $TutorStatus =$row['status'];
+                        $id = $row['id'];
+												if($tutor == $_SESSION['username'])
 												{ ?>
 													<tr>
 														<td class= "task"> <?php echo $fn; ?></td>
@@ -79,13 +86,17 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 														<td>&nbsp;</td>
 														<td class = "task"> <?php echo $time;?> </td>
 														<td>&nbsp;</td>
+                            <td class="task"><?php echo $timeEnds;?> </td>
+                            <td>&nbsp; </td>
 														<td class = "task"><?php echo $date;?> </td>
 														<td> &nbsp;</tb>
-
-															<td class = "colr" id= "color">pending</td>
-
-<td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
-                 <td class="tick" id ="tick"> <a href='#'> &#10004; </a></td>
+                            
+														<td> &nbsp;</tb>
+                                                        <td class = "task" name="Statuez">  <?php echo $row['status']?><td>
+                                                        <td class="accpet" id ="tick"  name="accpetd"><a href="books.php?accpet=<?php echo $row['id'];?>">  &#10004; </a></td>
+                                                        <td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+														 
+ 
              </tr>
 
 
@@ -100,26 +111,4 @@ if($_SESSION['login'] != "That GRRRRREAT") {
      </div> 
     </div>  
     </body>
-<script>
-$(document).ready(function(){
-
-    $('.deletes').css({color:'green'});
-        $('.tick').css({color:'red'});
-    $(".colr").css({color:'orange'});
-
-});
-
-    $(".tick").click(function()
-    {
-        var colors = $(this).data('colr');
-        $("#color").text("accept");
-          // $(".colr").text().replace("pending", "Accept");
-     $("#color").css("color","green");
-
-        //$(this).css("color", "green");
-    });
-
-
-
-    </script>
-</html>
+ </html>
