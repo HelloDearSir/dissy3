@@ -14,11 +14,11 @@ $_SESSION['login'] = "";
 // This if statement will only work after a POST happens
 if($_SERVER['REQUEST_METHOD'] === "POST") {
     // Connect to the DB & check for error
-    $conn = new mysqli("localhost", "root", "root", "c9");
+    $conn = new mysqli("localhost", "root", "root", "test");
     if($conn->connect_error) die("[E] Could not connect to DB: " . $conn->connect_error);
    
     // Run the SQL code & check for error
-    $query = $conn->query("SELECT * FROM users WHERE Username = '$uname' AND Password = '$pword'");
+    $query = $conn->query("SELECT * FROM tutor WHERE Username = '$uname' AND Password = '$pword'");
     if($query == false) die("[E] Could not query DB: " . $conn->error);
    
     // Copy num_rows to result var
@@ -42,11 +42,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
 }
  
 // Check the login variable now to see if it is true or not. If it is true, redirect.
-if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
+if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepagetutor.php");
  
 ?>
  
-
 
 <!doctype html>
 
@@ -76,7 +75,7 @@ if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
 
  <h3>Existing users  </h3>
 
-    <form action="login.php" method="post">
+    <form action="TutorLogin.php" method="post">
 
         <fieldset>
 
@@ -109,10 +108,8 @@ if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
 <div class="col-xs-12 col-md-6">
 
 <h3> Not Registered?</h3>
-
-<p> If  you are a student and don't have a log in please <a href="sign_up.php">Click here</a>     </p>
-
-<a class= "btn btn-default btn-primary form-control" href="sign_up.php">Sign up</a>
+<p> If you are a tutor and don't have a log in please <a href="sign_upTutor.php"> Sign up</a>
+<a class= "btn btn-default btn-primary form-control" href="sign_upTutor.php">Sign up</a>
 
 
     </div>

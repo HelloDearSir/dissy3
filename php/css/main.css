@@ -377,7 +377,13 @@ position: relative;
     { display: none;
 
     }
-  
+  #container
+    	{
+        position: relative;
+        left:-15px;
+        width:500px;
+    }
+
     #leftside
     {
         position: relative;

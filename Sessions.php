@@ -46,24 +46,24 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 										<th>&nbsp;</th>
                     <th>Status  </th>
 										<th>&nbsp;</th>
-              
+                    <th>Tutor  </th>
+										<th>&nbsp;</th>
 							
                 </tr>
             </thead>
             <tbody>
 							<?php
-						require 'booking.php';
-                            require 'connection.php';
-                            
+						
+							require 'connection.php';
 							//select from tasks db where student = session cookie
-								$query= 'SELECT * FROM  `booking` WHERE `tutor`= "'.$_SESSION['username'].'"';
+								$query= 'SELECT * FROM  `booking` WHERE `StudentUser`= "'.$_SESSION['username'].'"';
 								$results = mysqli_query($connect, $query);
 									if ($results)
 										{ //if the query is uccessful then do this.
 											while ($row = mysqli_fetch_assoc($results))
 											{
                         
-												$tutor= $row['tutor'];
+												$tutor= $row['StudentUser'];
 												$fn= $row['First'];
 												$ln = $row['Last'];
 												$meetplace = $row['location'];
@@ -72,7 +72,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 												$date = $row['bookingd'];
                         $phonen = $row['Phone'];
                         $TutorStatus =$row['status'];
-                        $id = $row['id'];
+                        $Tutors = $row['tutor'];
 												if($tutor == $_SESSION['username'])
 												{ ?>
 													<tr>
@@ -86,15 +86,15 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 														<td>&nbsp;</td>
 														<td class = "task"> <?php echo $time;?> </td>
 														<td>&nbsp;</td>
-                            <td class="task"><?php echo $timeEnds;?> </td>
+                            <td class="task""><?php echo $timeEnds;?> </td>
                             <td>&nbsp; </td>
 														<td class = "task"><?php echo $date;?> </td>
 														<td> &nbsp;</tb>
-                            
+                            <td class = "task"><?php echo $TutorStatus;?> </td>
 														<td> &nbsp;</tb>
-                                                        <td class = "task" name="Statuez">  <?php echo $row['status']?><td>
-                                                        <td class="accpet" id ="tick"  name="accpetd"><a href="books.php?accpet=<?php echo $row['id'];?>">  &#10004; </a></td>
-                                                        <td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+                            <td class = "task"><?php echo $Tutors;?> </td>
+														<td> &nbsp;</tb>
+
 														 
  
              </tr>

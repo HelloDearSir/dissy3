@@ -3,117 +3,149 @@
     if($_SESSION['login'] != "That GRRRRREAT")
 
 {
-  header('Location: login.php');
-  exit();
+  exit(header('Location: login.php'));
+ 
           }
 
 ?>
+<!DOCTYPE html>
 <html>
-<head> <link rel="stylesheet" a href="css/book.css">
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta charset="utf-8">
-    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3..3.1/jquery"></script></head>
+ <?php require 'meta.php' ?>
+
       <body>
-  <div id ="nav">
-    <div id ="nav">
-      <label for="toggle">&#9776;</label>
-      <input type="checkbox" id="toggle">
-      <div class = "menu">
-        <a href="profilepage.php"><?php  echo $_SESSION['Username']; ?> </a>
-          <a href="messages.php">Messages  </a>
-            <a href="book.php">Booking</a>
-            <a href="logout.php"> Log Out </a>
-                </div>
-                      </div>
-
-                      </ul>
-                      <div id= "container">
-                      <div id="form">
-                      				 	<form action="booking.php" method="post">
-                      					<table>
-                                  <p id="into"> Please insert the Tutor username <br> and they will message if the booking is accepted.</p>
-                      						<tr>
-                      							<td align= "right" id = "lt">
-                      								First Name:
-                      							</td>
-                      							<td>
-                      								<input size="20px" size="20px" maxlengh="15" type="text" name="first" id="user" onkeyup="check_user()" required>
+      <?php require 'headerlogin.php' ?>
 
 
-
-                      						</tr>
-                        </div>
-                      						<tr>
-                      							<td align = "right" id="lt">
-                      								Last Name:
-                      							</td>
-                      							<td>
-                      								<input size="20px" type="textf" size="20px" maxlengh="15" name="password" id="last">&nbsp;
-
-                      							</td>
-
-
-                      						</tr>
-
-                      						<tr><td align = "right" id = "lt">
-                      								Phone number:
-                      							</td>
-                      							<td>
-                      								<input size="20px" type="text" size="20px" maxlengh="15" name="phonenumber" id = "pn">&nbsp;
-
-                      							</td>
+  <div class= "container">
+  <div class= "row">
+  <div id="form">
+  <form action="booking.php" method="post">
+  <fieldset>
+  <p id="into"> Please insert  your details  <br> and the tutor  will message if the booking is accepted.</p>
+  <tr>
+ <td>
+  <label> First Name: </label>
+   </td>
+   <td>
+  <input size="20px" size="20px" maxlengh="15" type="text" class="   form-control" name="first" id="user" onkeyup="check_user()" required>&nbsp;
+   </td>
+ </tr>
 
 
-                      						</tr>
-                                              <tr>
-                      							<td align = "right" id = "lt">
-                      								Location:
-                      							</td>
-                      							<td>
-                      								<input size="20px" type="text" size="20px" maxlengh="15" name="location">&nbsp;
+  <tr>
+  <td>
+  Last Name:
+  </td>
+  <td>
+  <input size="20px" type="text" size="20px" maxlengh="15" name="password"  class="Medium Text form-control" id="last">&nbsp;
+</td>
+</tr>
+<td>
+  Student Username:
+  </td>
+  <td>
+  <input size="20px" type="text" size="20px" maxlengh="15" name="Sname"  class="Medium Text form-control" id="last">&nbsp;
+</td>
+</tr>
 
-                      							</td>
-                                              </tr>
-                        <tr>
+  <tr>
+  <td>
+  Phone number:
+  </td>
+  <td>
+  <input size="20px" type="text" size="20px" maxlengh="15" name="phonenumber"  class="Medium Text form-control" id = "pn">&nbsp;
 
-	<td align = "right" id = "lt">
-                         Tutor:
-
-                            </td>
-                            <input size = "20px" type="text" maxlengh="15" name="tutor" id = "tutors">
-                                              </tr>
-                                              <tr>
-                                                  <td align = "right" id="lt">
-                      								Booking date:
-                      							</td>
-                                         <td>
-                                           <input type="date" name="bookingd" id = "dates" >
-                                         </td>
-
-                                              </tr>
+  </td>
 
 
+  </tr>
+  <tr>
+  <td align = "right" id = "lt">
+  Location:
+  </td>
+  <td>
+  <input size="20px" type="text" size="20px" maxlengh="15" name="location"  class="Medium Text form-control" >&nbsp;
 
-                                              <tr>
-                                            <td align = "right" id = "lt">
+  </td>
+  </tr>
+  <tr>
 
-                                              Time slot
+  <td align = "right" id = "lt">
+  Tutor:
 
-                                              </td>
-                                              <td>
-                                                  <input type = "text" name ="time" id = "times">
-                                                  </td>
+  </td>
+  <td>
+  <select  name="tutor" class="col-12"> 
+                                    <option size= "" type="text" class=" text form-control"> </option>
+                                    <option size= "" type="text" class=" text form-control" value="Micky_Rowe">Micky_Rowe</option>
+                                    <option size= "" type="text" class=" text form-control"   value="John_Doe">John_Doe  </option>
+                                    <option size= "" type="text" class=" text form-control" value="Elizabeth_Burrows">Elizabeth_Burrows </option>
+                                    <option size= "" type="text" class=" text form-control"   value="Aidan_Glover"> Aidan_Glover  </option>
+                                    <option size= "" type="text" class=" text form-control" value="Isobel_Cartwright">Isobel_Cartwright </option>
+                                  
+                                     </select>
+  </td>
+  </tr>
+  <tr>
+  <td align = "right" id="lt">
+  Booking date:
+  </td>
+  <td>
+  <input type="date" name="bookingd" id = "dates"  class="Medium Text form-control"  >&nbsp;
+  </td>
 
-                                              </tr>
-                      						 <td colspan= "2" align="left">  <button type="submit" class="button" name="submit">Book</button></td>
-
-                      					</div>
+  </tr>
 
 
+
+  <tr>
+  <td align = "right" id = "lt">
+ Session Start:
+
+  </td>
+  <td>
+  <td>
+  <select  name="time">
+                                     <option size= "" type="text" class=" text form-control" value="9am">9 am   </option>
+                                    <option size= "" type="text" class=" text form-control"   value="10 am ">10 am  </option>
+                                    <option size= "" type="text" class=" text form-control" value="11 am">11 am   </option>
+                                    <option size= "" type="text" class=" text form-control"   value="12pm">12 pm   </option>
+                                    <option size= "" type="text" class=" text form-control" value="1pm">1 pm </option>
+                                  
+                                     </select>
+  </td>
+  </td>
+<td>
+Session End:
+<select name="timz">
+ 
+                                    <option size= "" type="text" class=" text form-control"   value="10 am ">10 am  </option>
+                                    <option size= "" type="text" class=" text form-control" value="11 am">11 am   </option>
+                                    <option size= "" type="text" class=" text form-control"   value="12pm">12 pm   </option>
+                                    <option size= "" type="text" class=" text form-control" value="1pm">1 pm </option>
+                                    </select>
+
+</td>
+</td>
+  </tr>
+     <td> 
+      <div class="availablive">
+      <select name="available">
+      <option size= "" type="text" class=" text form-control"   value="pending" >pending </option>
+      </select>
+      </div>
+      </td>
+  <div class="next loginbutton">
+   <button type="submit" class="button" name="submit">Book</button>
+   
+
+</fieldset>
+</form>
 
 
                       </body>
 
-
+</div>
+</div>
 
 </html>
