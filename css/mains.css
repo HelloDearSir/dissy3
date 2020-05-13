@@ -21,6 +21,7 @@ body {
   background: #fffdd0;
   color: #00008b; }
 
+<<<<<<< HEAD
 .WrongData {
   position: absolute;
   top: 56%;
@@ -126,4 +127,6 @@ table {
 .recivers .Main p, .users .Mains p {
   font-weight: bold; }
 
+=======
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 /*# sourceMappingURL=mains.css.map */

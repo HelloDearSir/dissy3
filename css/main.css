@@ -1,4 +1,6 @@
+@import 'menu.css';
 
+<<<<<<< HEAD
 @import'menu.css';
 
 .xdebug-error.xe-notice {
@@ -12,24 +14,19 @@
 
 
 	 p {
+=======
+	a, p {
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 		font-size :1.5em;
 		font-family: helvetic;
     color: black;
 
 	}
+  hr.stlye
+{
 
-	a
-	{
-		text-decoration: none;
-	 color: blue;
-	}
-
-
-
-body{
-
+border-bottom: 10px solid #00000;
 }
-
 
 .tesx
 {
@@ -43,17 +40,17 @@ body{
 
 	box-shadow: 2px 10px 30px;
 	position: fixed;
+
 	top: 20%;
-	background: white;
-	z-index:1;
+	background: #ffffff;
+	z-index:2;
 	left:50%;
-	font-family: newfont;
         /*transform is x,y.*/
-		transform: translate(-300px,0);
-		border-radius: 5px;
-		overflow: auto;
-		display: none;
-    width: 50em;
+	transform: translate(-300px,0);
+	border-radius: 5px;
+	overflow: auto;
+	display: none;
+        width: 50em;
 
 	}
    @media (max-width:768px)
@@ -87,19 +84,18 @@ body{
 /* New message box */
 .header, .footer
 {
-	background: #6969; margin:0px;
+	background: #696969; margin:0px;
 	color:white;
 	padding:5px;
 }
 
-.header
-{
-	font-size :50px;
-	text-align: center;
+.header {
+font-size :50px;
+text-align: center;
+
 }
 
-.body
-{
+.body{
 	padding:5px;
 }
 
@@ -111,8 +107,8 @@ body{
     top:5.9em;
     position: absolute;
     padding:6px;
-		background: #efefef;
-		margin: 2px;
+background: #efefef;
+margin: 2px;
 }
 
 .minput
@@ -129,8 +125,7 @@ body{
     }
 #submit
 {
-
-		color:black;
+    color:grey;
     position: relative;
     left:10em;
     margin: 2px 0px 4px 10px;
@@ -140,13 +135,14 @@ body{
 
 .cancel
 {
-    color:black;
+    color:grey;
     position: relative;
     left:10em;
     margin: 2px 0px 4px 10px;
     padding: 2px 5px 5px;
     top:10px;
 }
+<<<<<<< HEAD
 /*  containers
 #container{
 	box-shadow:2px 2px 10px #000000;
@@ -158,6 +154,18 @@ body{
  	position: relative;
 	top: 50px;
   background: white;
+=======
+/*  containers */
+	#container{
+		box-shadow:2px 2px 10px #000000;
+	width:1200px;
+ height:90%;
+margin:2% auto;
+border-radius: 1%;
+overflow:hidden;
+ position: relative;
+top: -15px;
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
  }
 
@@ -173,29 +181,28 @@ body{
 #leftside, #rightside
 {
   position: relative;
-  top: 50px;
+  top: 60px;
   float:left;
-  height:40%;
-
+  height:90%;
+    border: 1px solid black;
 }
 #leftside
 {
   width:30%;
-
 }
 #rightside
 {
   width:60%;
 }
 
-#contactsside
+#left-col-container
 {
-
-    width:100%;
-  	margin: 0px auto;
-   	height: 42em;
-
+  width:100%;
+  margin: 0px auto;
+   height:100%;
+   overflow: auto;
 }
+<<<<<<< HEAD
 #msgbox
 {
 		position: relative;
@@ -214,18 +221,34 @@ body{
  
 		 left: -8%; 
 		height: 30%;
+=======
+#msgform
+{ position: fixed;
+  top: 550px;
+	width: 40%;
+	left: 35%;
+	height: 30%;
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 }
 }
 .contact
 {
-	border:1px solid black;
-	padding:5px;
-	background: white;
-	margin: 2px;
-	overflow:auto;
+border:1px solid black;
+padding:5px;
+background: white;
+margin: 2px;
+
+overflow:auto;
+}
+.image {
+  float:left;
+  margin-right:5px;
+  width:50px;
+  height: 50px;
 }
 
 #mainmessages
+<<<<<<< HEAD
 	{
     	overflow:auto ;
      	position: relative;
@@ -233,12 +256,22 @@ body{
         width: 100%;
 				height: 400px;
         border: 1px solid; 
+=======
+{
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
+    overflow:auto ;
+   position: relative;
+        width: 50%;
+height: 70%;
+top:40px;
 }
+
 .nMess
 {
     cursor: pointer;
     font-size: 20px;
+<<<<<<< HEAD
     width: 100%; 
     border: 1px solid black;
   
@@ -256,27 +289,34 @@ body{
        font-size:14px;
      }
    }
+=======
+    width: 100%;
+    margin: 2px;
+    border: 1px solid black;
+    height: 20px;
+}
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 .textarea
 {
 	width:45%;
 	height: 5%;
 	border: 1px solid #efefe;
 	position: fixed;
-  bottom:4%;
-  left: 36.7%;
+bottom:4%;
+    left: 36.7%;
 	margin:0px auto;
-  border-radius: 3px;
-  box-shadow: 10px solid black;
+    border-radius: 3px;
+    box-shadow: 10px solid black;
 
 }
 
 .users, .recivers
 {
 	border: 1px solid black;
-	width:400px;
-	padding:0px 20px;
-	margin:10px auto;
-position: relative;
+	width:90%;
+	padding:1px;
+	margin:0px auto;
+	margin-top:1%;
 	overflow: auto;
     background: #efefef;
 
@@ -288,8 +328,9 @@ position: relative;
 }
 .recivers
 {
-	background: white;
+	background: #ffff;
 }
+<<<<<<< HEAD
 
 @media only screen and (min-width: 360px) and (max-width: 500px) and (max-height:812px)
 {
@@ -449,3 +490,5 @@ font-size: 10px;
 
 
 		}
+=======
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36

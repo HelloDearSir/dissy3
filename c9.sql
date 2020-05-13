@@ -3,9 +3,15 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
+<<<<<<< HEAD
 -- Generation Time: May 11, 2020 at 03:51 PM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
+=======
+-- Generation Time: Feb 20, 2020 at 09:17 PM
+-- Server version: 5.7.11
+-- PHP Version: 5.6.18
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,19 +37,27 @@ CREATE TABLE `booking` (
   `First` varchar(255) NOT NULL,
   `Last` varchar(255) NOT NULL,
   `Phone` varchar(255) NOT NULL,
+<<<<<<< HEAD
   `StudentUser` varchar(50) NOT NULL,
+=======
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
   `location` varchar(255) NOT NULL,
   `bookingd` date NOT NULL,
   `tutor` varchar(255) NOT NULL,
   `time` varchar(255) NOT NULL,
+<<<<<<< HEAD
   `timends` varchar(50) NOT NULL,
   `status` varchar(25) NOT NULL
+=======
+  `student` varchar(25) NOT NULL
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booking`
 --
 
+<<<<<<< HEAD
 INSERT INTO `booking` (`id`, `First`, `Last`, `Phone`, `StudentUser`, `location`, `bookingd`, `tutor`, `time`, `timends`, `status`) VALUES
 (23, 'jon', 'barton', '075481705', '', 'Plymouth Uni', '2024-04-24', 'Chris_Johnson', '1pm-3pm', '', ''),
 (24, 'jon', 'b', '075481705', '', 'Plymouth Uni', '2019-05-31', 'Chris_Johnson', '1pm-3pm', '', ''),
@@ -75,6 +89,16 @@ INSERT INTO `booking` (`id`, `First`, `Last`, `Phone`, `StudentUser`, `location`
 (54, 'jon', 'barton', '07506481705', '12', 'plymouth', '2020-05-31', 'Micky_Rowe', '9am', '10 am ', 'pending'),
 (55, 'jon', 'barton', '07506481705', '12', 'plymouth', '2021-04-10', 'John_Doe', '9am', '10 am ', 'pending'),
 (56, 'Jon', 'barton', '07506481705', '12', 'plymouth', '2021-04-10', 'Micky_Rowe', '9am', '10 am ', 'pending');
+=======
+INSERT INTO `booking` (`id`, `First`, `Last`, `Phone`, `location`, `bookingd`, `tutor`, `time`, `student`) VALUES
+(23, 'jon', 'barton', '075481705', 'Plymouth Uni', '2024-04-24', 'Chris_Johnson', '1pm-3pm', 'Jon_Barton'),
+(24, 'jon', 'b', '075481705', 'Plymouth Uni', '2019-05-31', 'Chris_Johnson', '1pm-3pm', 'Jon_Barton'),
+(26, 'jon', 'b', '075481705', 'Plymouth Uni', '2019-05-31', 'Chris_Johnson', '1pm-3pm', 'David_seaman'),
+(27, 'jon', 'b', '075481705', 'Plymouth Uni', '2019-05-31', 'Chris_Johnson', '1pm-3pm', 'Jon_Barton'),
+(28, 'jon', 'b', '07506481705', 'plymouth', '2019-01-17', 'Micky', '1pm', 'jon'),
+(29, 'jon', 'barton', '07506481705', 'plymouth', '2020-01-30', 'Micky', '1pm', 'jon'),
+(30, 'jon', 'barton', '07506481705', 'plymouth', '2019-01-15', 'Micky', '2pm - 3pm', 'jon');
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
 -- --------------------------------------------------------
 
@@ -122,6 +146,7 @@ INSERT INTO `chat` (`id`, `messager`, `messagee`, `msg`) VALUES
 (109, 'Jon_Barton', 'micky_row', 'Hello'),
 (110, 'Jon_Barton', 'micky_row', 'I see you then'),
 (111, 'Chris_johnson', 'Jon_Barton', 'Hello'),
+<<<<<<< HEAD
 (112, 'jbarton2', 'Micky_row', 'hello'),
 (113, 'Bitchhhhh', 'Micky_Rowe', 'Hello'),
 (114, 'Bitchhhhh', '', ''),
@@ -133,6 +158,9 @@ INSERT INTO `chat` (`id`, `messager`, `messagee`, `msg`) VALUES
 (120, '', '', ''),
 (121, 'Micky_Rowe', '12', 'Hello'),
 (122, '', '', '');
+=======
+(112, 'jbarton2', 'Micky_row', 'hello');
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
 -- --------------------------------------------------------
 
@@ -154,6 +182,7 @@ INSERT INTO `tasks` (`id`, `task`, `student`) VALUES
 (263, 'rerer', 'Chris_Johnson'),
 (264, 'efefjefefef9rj4jr4', 'Chris_johnson'),
 (304, 'Hello', 'jbarton2'),
+<<<<<<< HEAD
 (307, 'wdd', 'micky'),
 (308, '', 'micky'),
 (309, 'wewew', 'Bitchhhhh'),
@@ -176,6 +205,11 @@ CREATE TABLE `tutors` (
   `Username` varchar(255) DEFAULT NULL,
   `Password` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+=======
+(306, 'Tuesday 2pm  - 3pm', 'Jon_Barton'),
+(307, 'wdd', 'micky'),
+(308, '', 'micky');
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
 -- --------------------------------------------------------
 
@@ -222,6 +256,7 @@ INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Username`, `Password`, `Uni
 (54, '', '', 'Jeff', 'e6c83b282aeb2e022844595721cc00bbda47cb24537c1779f9bb84f04039e1676e6ba8573e588da1052510e3aa0a32a9e55879ae22b0c2d62136fc0a3e85f8bb', 'Exeter ', 'nonce', ''),
 (55, '', '', '', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '', '', ''),
 (56, '', '', 'Jeff', 'e6c83b282aeb2e022844595721cc00bbda47cb24537c1779f9bb84f04039e1676e6ba8573e588da1052510e3aa0a32a9e55879ae22b0c2d62136fc0a3e85f8bb', 'University of Plymouth', 'Micky', 'Computing'),
+<<<<<<< HEAD
 (57, '', '', 'Jon_Barton97', 'e93238bfa3b394a3a4b6267cf0a1e8ef769e45292e55b03954f66237b545b6ab2826f8e2140420a6e9f90b8fbc28b6680165da8ac01d404e22f0b71d0f411257', 'University of Plymouth', 'Micky', 'Computing'),
 (58, 'bitchh', 'Barton', 'daddy', 'e93238bfa3b394a3a4b6267cf0a1e8ef769e45292e55b03954f66237b545b6ab2826f8e2140420a6e9f90b8fbc28b6680165da8ac01d404e22f0b71d0f411257', '', '', ''),
 (59, 'bitchh', 'Barton', 'daddy', 'cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e', '', '', ''),
@@ -243,6 +278,9 @@ INSERT INTO `users` (`id`, `Firstname`, `Lastname`, `Username`, `Password`, `Uni
 (75, 'Micky', 'Rowe', 'Micky_Rowe', 'password', 'University Plymouth', 'Micky_Rowe', 'BSC Computing'),
 (76, 'jo', 'b', 'Micky_rowe', 'password', 'University Plymouth', 'Micky_Rowe', 'BSC Computing'),
 (77, 'Jon', 'Barton', 'Jon_Barton', 'PasswordPassword', 'University Plymouth', 'Micky_Rowe', 'BSC Computing');
+=======
+(57, '', '', 'Jon_Barton97', 'e93238bfa3b394a3a4b6267cf0a1e8ef769e45292e55b03954f66237b545b6ab2826f8e2140420a6e9f90b8fbc28b6680165da8ac01d404e22f0b71d0f411257', 'University of Plymouth', 'Micky', 'Computing');
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
 --
 -- Indexes for dumped tables
@@ -280,22 +318,38 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
+<<<<<<< HEAD
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+=======
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 --
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
+<<<<<<< HEAD
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+=======
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 --
 -- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=326;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=309;
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

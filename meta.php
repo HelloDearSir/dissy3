@@ -12,7 +12,10 @@
  
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
  <link rel="stylesheet" href="css/mains.css"> 
+<<<<<<< HEAD
  
+=======
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 <style> 
 .btn-primary:hover 
 {

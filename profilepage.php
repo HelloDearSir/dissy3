@@ -50,7 +50,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
         </form>
 		<div class="container">
 		 <div class= "row">
+<<<<<<< HEAD
         <table class= "table tablez">
+=======
+        <table class= "table">
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
             <thead>
                 <tr>
 
@@ -75,10 +79,16 @@ require 'connection.php';
 					$task= $row['task'];
 					if($student == $_SESSION['Username'])
 					{ ?>
+<<<<<<< HEAD
 						<tr class="tables">
 
 							<td class= "task tasksnames"> <?php echo $task; ?></td>
 							<td class = "delete taskdelete"> <a href="profilepage.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+=======
+						<tr>
+							<td class= "task"> <?php echo $task; ?></td>
+							<td class = "delete"> <a href="profilepage.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 									</tr>
 						<?php // opening a second php tag allows me to display them into the tr tag which is rows.
  						}

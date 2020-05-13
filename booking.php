@@ -43,7 +43,11 @@ if(isset($_POST['accpetd'])) {
   $id = $_POST['ids'];
  
   if(!empty($id)) {
+<<<<<<< HEAD
   mysqli_query($db, "UPDATE booking SET status = 'test' WHERE id ='{$id}' ");
+=======
+  mysqli_query($db, "UPDATE booking SET statues = 'test' WHERE id ='{$id}' ");
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
   }
           } 
 

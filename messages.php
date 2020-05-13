@@ -11,8 +11,13 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 <html>
 	<head>
 	<?php require 'meta.php' ?>
+<<<<<<< HEAD
     <?php require 'headerlogin.php'?>
   
+=======
+  
+ 
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
  <meta charset="utf-8">
@@ -22,7 +27,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 
 	</head>
 	<body>
+<<<<<<< HEAD
  
+=======
+  <?php require 'headerlogin.php' ?>
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
   <?php require 'newmessage.php' ?>
   <?php require 'LeftSide.php' ?>
  
@@ -58,7 +67,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	  					if($user_sender == $_SESSION['username'])
 	  					{ ?>
 	    				<div class="users">
+<<<<<<< HEAD
 	      				<p> <?php echo $_SESSION['username']; ?></p>
+=======
+	      				<p class="Main"><b> <?php echo $_SESSION['username']; ?></b></p>
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 	      					<p> <?php echo $message ?></p>
 	    						</div>
 	    								<?php
@@ -69,7 +82,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	            // this echo will post the $message that that the sender has sent them.
 	    												?>
 	    			<div class="recivers">
-	       	         	<p><?php echo $user_sender; ?> </p>
+	       	         	<p class="Mains "><b><?php echo $user_sender; ?> </b></p>
 	       			<p><?php echo $message ?></p>
 	     				</div>
 	     					<?php
@@ -102,7 +115,11 @@ $("document").ready(function(event)
 	$("#rightside").on('submit', 'msg', function(){
 		//take the data from input 
    var message_text = $("minput").val();
+<<<<<<< HEAD
 		//post it to sned.php
+=======
+		//post it to sned.php 
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
    $.post("send.php?user=<?php echo$_GET['user']?>",
    { text:message_text,
 	

@@ -4,7 +4,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	header('Location: login.php');
 	exit();
 } else {
+<<<<<<< HEAD
 	$username = $_SESSION['username'];
+=======
+	$username = $_SESSION['Username'];
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 }
 ?>
 
@@ -27,7 +31,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                                 <div id = "filter"></div>
                                 </div>
                                 </div>
+<<<<<<< HEAD
         <table class="table SessionTable">
+=======
+        <table class="table">
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
             <thead>
                 <tr>
                     <th>First Name </th>
@@ -38,6 +46,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                     <th>&nbsp;</th>
                     <th> Location </th>
                     <th>&nbsp;</th>
+<<<<<<< HEAD
                     <th>Time Start </th>
                     <th>&nbsp;</th>
                     <th>Time End</th> 
@@ -47,6 +56,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                     <th>Status  </th>
 										<th>&nbsp;</th>
                     <th>Tutor  </th>
+=======
+                    <th>Time </th>
+                    <th>&nbsp;</th>
+										<th>Date  </th>
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 										<th>&nbsp;</th>
 							
                 </tr>
@@ -56,17 +70,25 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 						
 							require 'connection.php';
 							//select from tasks db where student = session cookie
+<<<<<<< HEAD
 								$query= 'SELECT * FROM  `booking` WHERE `StudentUser`= "'.$_SESSION['username'].'"';
+=======
+								$query= 'SELECT * FROM  `booking` WHERE `StudentUser`= "'.$_SESSION['Username'].'"';
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 								$results = mysqli_query($connect, $query);
 									if ($results)
 										{ //if the query is uccessful then do this.
 											while ($row = mysqli_fetch_assoc($results))
 											{
+<<<<<<< HEAD
                         
+=======
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 												$tutor= $row['StudentUser'];
 												$fn= $row['First'];
 												$ln = $row['Last'];
 												$meetplace = $row['location'];
+<<<<<<< HEAD
                         $time = $row['time'];
                         $timeEnds =$row['timends'];
 												$date = $row['bookingd'];
@@ -74,6 +96,12 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                         $TutorStatus =$row['status'];
                         $Tutors = $row['tutor'];
 												if($tutor == $_SESSION['username'])
+=======
+												$time = $row['time'];
+												$date = $row['bookingd'];
+												$phonen = $row['Phone'];
+												if($tutor == $_SESSION['Username'])
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 												{ ?>
 													<tr>
 														<td class= "task"> <?php echo $fn; ?></td>
@@ -86,6 +114,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 														<td>&nbsp;</td>
 														<td class = "task"> <?php echo $time;?> </td>
 														<td>&nbsp;</td>
+<<<<<<< HEAD
                             <td class="task""><?php echo $timeEnds;?> </td>
                             <td>&nbsp; </td>
 														<td class = "task"><?php echo $date;?> </td>
@@ -94,6 +123,10 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 														<td> &nbsp;</tb>
                             <td class = "task"><?php echo $Tutors;?> </td>
 														<td> &nbsp;</tb>
+=======
+														<td class = "task"><?php echo $date;?> </td>
+														<td> &nbsp;</tb>
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 
 														 
  

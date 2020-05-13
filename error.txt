@@ -190,6 +190,7 @@
   The  Username is : rr
  The password  is:r
 
+<<<<<<< HEAD
 The username is: 1
 The password  is: 1
 
@@ -310,3 +311,5 @@ The password  is: Password1
 The username is: Jon_Barton
 The password  is: Password
 
+=======
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
