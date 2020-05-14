@@ -1,10 +1,8 @@
 <?php
-<<<<<<< HEAD
 require 'php/sig_up.php';
-=======
-require 'php/sig_upcopy.php';
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
-
+ $connect = mysqli_connect("localhost", "root", "root","c9");
+ $query =  'SELECT * FROM  tutor ORDER BY Username ASC ';
+  $result = mysqli_query($connect,$query);
 ?>
 <!doctype html>
 <html>
@@ -40,7 +38,6 @@ require 'php/sig_upcopy.php';
                                    </div>
  
                                     <div>
-<<<<<<< HEAD
                                    
 			<label>Username:</label>
 			<input name="username" type="text" id="username" class="form-control" onBlur="checkAvailability()"><span id="user-availability-status"></span>    
@@ -57,18 +54,6 @@ require 'php/sig_upcopy.php';
                                      <div>
                                       <label>Institution </label>
                                       </div>
-=======
-                                      <label>Username</label>  
-                                    
-                                        <input size ="17" type= "text" class="form-control" size"20" maxlengh= "15" name="username"> 
-                                   </div>
-                                    <div>
-                                   <label> Password </label> 
-                                    <input size ="17" type= "password" size"20" maxlengh= "15" name="password" class="form-control"> 
-                                     </div>
-                                     <div>
-                                      <label>Institution </label>
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
                                      <select  name="University">
                                     <option size= "" type="text" class=" text form-control" value="University Plymouth">University Plymouth  </option>
                                     <option size= "" type="text" class=" text form-control"   value="University Exeter"> University of Exeter  </option>
@@ -79,36 +64,25 @@ require 'php/sig_upcopy.php';
                                      </select>
                                     </div>
                                     <div>
-<<<<<<< HEAD
                                     <div>
                                     <label> Dsa Tutor </label>
                                     </div>
                                     <select  name="dsaTutor">
-                                    <option size= "" type="text" class=" text form-control" value="Micky_Rowe">Micky_Rowe </option>
-                                    <option size= "" type="text" class=" text form-control"   value="John_Doe"> John_Doe </option>
-                                    <option size= "" type="text" class=" text form-control" value="Jed_Bob">Jed_Bob </option>
-                                    <option size= "" type="text" class=" text form-control"   value="Gregg_Poe">Gregg_Poe  </option>
-                                    <option size= "" type="text" class=" text form-control" value="duchy collegeh">duchy college </option>
+                                         <?php 
+                                       while ($row = mysqli_fetch_array($result) )
+                                        {
+                                           echo'  <option size= "" type="text" class=" text form-control" value="'.$row['Username'].'">'.$row['Username'].'</option>';
+                                        }
+                                        ?>
+                                 
                                     </select>
-=======
-                                    <label> Dsa Tutor </label>
-                                    <option size= "" type="text" class=" text form-control" value="Micky_Rowe">Micky_Rowe </option>
-                                    <option size= "" type="text" class=" text form-control"   value="John_Doe"> John_Doe </option>
-                                    <option size= "" type="text" class=" text form-control" value="Jed_Bob">Jed_Bob </option>
-                                    <option size= "" type="text" class=" text form-control"   value="Gregg_Poe"> Plymouth College of Art  </option>
-                                    <option size= "" type="text" class=" text form-control" value="duchy collegeh">duchy college </option>
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
                                      </div>
                                      <div>
                                     <label> Studying</label>
                                     <input size= "" type="text" class=" text form-control" name="Study">
                                      </div>
                                     <div class="next loginbutton">
-<<<<<<< HEAD
                                         <input type="submit" value="Sign up" class="btn btn-default  btn-primary form-control" id="disable"> 
-=======
-                                        <input type="submit" value="Sign up" class="btn btn-default  btn-primary form-control"> 
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
                                      </div>
                                    
                                      </fieldset>
@@ -118,7 +92,6 @@ require 'php/sig_upcopy.php';
             </div>
         </div>
 	</body>
-<<<<<<< HEAD
    
 <script type="text/javascript">
 function checkAvailability(){
@@ -141,29 +114,4 @@ function checkAvailability(){
   
 }
 </script>
-=======
-   <script> 
- 
-        $('#user').keyup(function()
-                         {
-        var users =$('#user').val();
-       //$('#um').html('<img src="load.gif"> ');
-        
-        if(users!='')
-            {
-                $.post('checking.php', {username:users},
-                function(data)
-                {
-                    $('#um').html(data);
-                    
-                });
-            }
-            else
-                {
-                    $('#um').html('');
-                }
-        });
-       
-    </script>
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 </html>

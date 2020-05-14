@@ -17,7 +17,7 @@
     <div class="row">
     <ul class="navbar-nav">
       <li>
-      <a href="profilepage.php" class="nav-link" ><?php  echo $_SESSION['Username']; ?> </a>
+      <a href="profilepage.php" class="nav-link" ><?php  echo $_SESSION['username']; ?> </a>
       </li>
       <li>
       <a class="nav-link"  href="messages.php">Messages  </a>
