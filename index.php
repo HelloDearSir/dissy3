@@ -1,14 +1,5 @@
-<?php
-session_start();
-if($_SESSION['login'] != "That GRRRRREAT") {
-	header('Location: login.php');
-	exit();
-} else {
-	$username = $_SESSION['username'];
-}
-?>
 
-<?php  include('Updating.php'); ?>
+<?php  include('server.php'); ?>
 
 <?php 
  
@@ -24,7 +15,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
             $locations = $n['location'];
             $timeStart = $n['time'];
             $timeEnd = $n['timends'];
-            $fn = $n['First'];
+            $fn= $n['First'];
             $phonen = $n['Phone'];
             $ln = $n['Last'];
 		}
@@ -150,7 +141,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                                         <td class = "task"><?php echo $date;?> </td>
                                         <td> &nbsp;</tb>
                                         <td class = "task" name="Statuez">  <?php echo $row['status']?><td>
-                                        <td class="update" id ="tick"  name="update"><a href="books.php?edit=<?php echo $row['id'];?>"> &#9989;</a></td>
+                                        <td class="update" id ="tick"  name="update"><a href="index.php?edit=<?php echo $row['id'];?>"> &#9989;</a></td>
                                         <td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
                                     </tr>
                                         <?php }

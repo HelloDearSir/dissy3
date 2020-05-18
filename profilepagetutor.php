@@ -15,19 +15,23 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 <?php require  'meta.php' ?>
     <body>
 	<?php require  'headerlogin.php' ?>
-  
-
 					<div class= "container">
 					  <div class="row">
 			   				<div class= "col-sm-3">
 											 
 							   <h3>Useful Links </h3>
-							   
+						 	 
 									<ul>
-									<?php require  'sidelinks.php' ?>     
-     					</ul>     
-		</div>
-							 
+								
+									<li class="ButtonPAdding">  <a href='#' class = "btn btn-primary form-control"> Plymouth University</a></li>
+											<li class="ButtonPAdding">	<a href='https://dle.plymouth.ac.uk' class="btn btn-primary form-control">DLE</a></li>
+											<li class="ButtonPAdding">	<a href='https://www.fotpms.plymouth.ac.uk/SPMS/' class="btn btn-primary form-control">SPMS</a></li>
+										<li class="ButtonPAdding">	<a href='https://outlook.office.com/owa/?wa=wsignin1.0' class="btn btn-primary form-control">University Email</a></li>
+												<li class="ButtonPAdding"><a href='books.php' class="btn btn-primary form-control">See booking</a></li>
+												<li class="ButtonPAdding"><a href='Students.php' class="btn btn-primary form-control"> Students</a></li>		
+											 		 
+									</ul>
+								</div>
         <div class= "col-sm-9">
   
 
@@ -48,7 +52,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
         </form>
 		<div class="container">
 		 <div class= "row">
-        <table class= "table tablez">
+        <table class= "table">
             <thead>
                 <tr>
 
@@ -73,10 +77,9 @@ require 'connection.php';
 					$task= $row['task'];
 					if($student == $_SESSION['username'])
 					{ ?>
-						<tr class="tables">
-
-							<td class= "task tasksnames"> <?php echo $task; ?></td>
-							<td class = "delete taskdelete"> <a href="profilepage.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+						<tr>
+							<td class= "task"> <?php echo $task; ?></td>
+							<td class = "delete"> <a href="profilepage.php?del_task=<?php echo $row['id'];?>"> X</a></td>
 									</tr>
 						<?php // opening a second php tag allows me to display them into the tr tag which is rows.
  						}

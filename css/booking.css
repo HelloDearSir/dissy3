@@ -77,7 +77,7 @@ h2
 
 
 /*For the table */
-table
+/* table
 {
     position: relative;
     top:150px;
@@ -142,7 +142,7 @@ tr:hover
 	border-radius: 3px;
 	text-decoration: none;
 	width:10px;
-}
+} */
 
 @media only screen and (min-width: 360px) and (max-width: 500px) and (max-height:812px)
 {

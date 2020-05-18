@@ -11,12 +11,15 @@ if (isset($_POST['submit'])) {
     $location = $_POST['location'];
     $dates = $_POST['bookingd'];
     $time = $_POST['time'];
-        $query = "INSERT INTO booking(first, Last, Phone,location, tutor,bookingd,time) VALUES('$student', '$last', '$phone',  '$location', '$tutor', '$dates', '$time' )";
+    $times = $_POST['timz'];
+    $studentusername =$_POST['Sname'];
+    $TutorAviable= $_POST['available'];
+        $query = "INSERT INTO booking(first, Last, StudentUser, Phone, location, tutor,bookingd,time,timends,status) VALUES('$student', '$last','$studentusername', '$phone',  '$location', '$tutor', '$dates', '$time','$times','$TutorAviable')";
     $results = mysqli_query($db, $query);
 //if !$run_query is true then echo this error.
     if($results) {
             //echo that it worked
-            	header("Location: book.php");
+            	header("Location: index.php");
       //  echo 'QUERY ok<br />';
 
     } else {
@@ -24,15 +27,5 @@ if (isset($_POST['submit'])) {
       //  echo 'QUERY failed -- ';
     }
 }
-//deleting the task.
-if(isset($_GET['del_task']))
-{
-    $id = $_GET['del_task'];
-    mysqli_query($db,"DELETE FROM booking WHERE id=$id");
-    header('location:books.php');
-}
-//selecting the db and using tasks to not reuse the task thats already been used to store the data.
-$booking = mysqli_query($db, "SELECT * FROM booking");
-
-
-?>
+ 
+ 
