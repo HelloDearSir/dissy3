@@ -1,53 +1,73 @@
-.menu
+ul
 {
-  margin: 0 30px 0 0;
-
-  position: relative;
-     text-align:right;
-  list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none;
+    margin:0;
+    padding:0;
     overflow: hidden;
-    background: white ;
-   position: fixed;
-    top: 0;
-    right:0;
-    width: 100%;
-
-    font-family:  sans-serif;
+    background-color: #efefefef;
+    left: 200px;
+    top:10px;
+    position: relative;
+    width:70%;
+    border-radius: 4px;
+    box-shadow: 5px  1px 10px ;
 }
-.menu a:
+
+li 
 {
-    background-color:aquamarine;
-    padding :0 5px;
-      transition: all 0.5s ease;
+    float: right;
+    
 }
- label
+#session 
 {
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
-  display: none;
-
+    position:relative; 
+    right:550px;
+    font-size: 30px;
+    color: seagreen;
+    top: 5px;
+    font-family: cursive;
 }
-#toggle
+
+
+li a
 {
-  display: none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 4px 16px;
+    font-size: 20px;
 
+    
+    
+  text-decoration: none;
 }
-
-.menu a
+ a
 {
   text-decoration: none;
-  margin: 0 10px;
-  line-height: 70px;
-  color:  	#00009a;
-     transition: border .5s;
+  
 }
 
-body
+li:hover:not(.active)
 {
-  margin:0;
-   padding:0;
-    background: #6969;
+    background-color: aliceblue;
 }
+
+.active 
+{
+    background-color: #4caf50;
+    width: 59%;
+    height: 40px;
+}
+
+
+
+
+/*body  */
+	html,body
+	{
+		height:100%;
+		overflow: hidden;
+		padding:0px;
+		margin: 0px;
+
+	}

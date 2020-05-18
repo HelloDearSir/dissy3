@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 	$connect = mysqli_connect("localhost", "root", "root", "c9") or die("summut gungan rong");
+=======
+	$connect = mysqli_connect("localhost", "root", "root", "test") or die("summut gungan rong");
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
    //When the user has been created,it wil be put onto the database, so new users can look onto the website, it will also connects  to 			     the database so it can put the new  users and passwords onto the database.
 	if(isset($_POST["username"])){
 	$new_user = mysqli_real_escape_string($connect, ($_POST["username"]));

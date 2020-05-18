@@ -19,7 +19,11 @@ if (isset($_POST['submit'])) {
 //if !$run_query is true then echo this error.
     if($results) {
             //echo that it worked
+<<<<<<< HEAD
             	header("Location: index.php");
+=======
+            	header("Location: Sessions.php");
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
       //  echo 'QUERY ok<br />';
 
     } else {
@@ -27,5 +31,34 @@ if (isset($_POST['submit'])) {
       //  echo 'QUERY failed -- ';
     }
 }
+<<<<<<< HEAD
  
+=======
+//deleting the task.
+if(isset($_GET['del_task']))
+{
+    $id = $_GET['del_task'];
+    mysqli_query($db,"DELETE FROM booking WHERE id=$id");
+    header('location:books.php');
+}
+//selecting the db and using tasks to not reuse the task thats already been used to store the data.
+
+
+ 
+ 
+if(isset($_POST['accpetd'])) {
+  $id = $_POST['ids'];
+ 
+  if(!empty($id)) {
+<<<<<<< HEAD
+  mysqli_query($db, "UPDATE booking SET status = 'test' WHERE id ='{$id}' ");
+=======
+  mysqli_query($db, "UPDATE booking SET statues = 'test' WHERE id ='{$id}' ");
+>>>>>>> 4821221142a69996b6411f3f65680deae984cc36
+  }
+          } 
+
+
+
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
  

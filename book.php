@@ -11,7 +11,10 @@
  $query =  'SELECT * FROM  tutor ORDER BY Username ASC ';
   $result = mysqli_query($connect,$query);
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
 <!DOCTYPE html>
 <html>
  <?php require 'meta.php' ?>
@@ -80,12 +83,21 @@
   </td>
   <td>
   <select  name="tutor" class="col-12"> 
+<<<<<<< HEAD
   <?php 
                                        while ($row = mysqli_fetch_array($result) )
                                         {
                                            echo'  <option size= "" type="text" class=" text form-control" value="'.$row['Username'].'">'.$row['Username'].'</option>';
                                         }
                                         ?>
+=======
+                                    <option size= "" type="text" class=" text form-control"> </option>
+                                    <option size= "" type="text" class=" text form-control" value="Micky_Rowe">Micky_Rowe</option>
+                                    <option size= "" type="text" class=" text form-control"   value="John_Doe">John_Doe  </option>
+                                    <option size= "" type="text" class=" text form-control" value="Elizabeth_Burrows">Elizabeth_Burrows </option>
+                                    <option size= "" type="text" class=" text form-control"   value="Aidan_Glover"> Aidan_Glover  </option>
+                                    <option size= "" type="text" class=" text form-control" value="Isobel_Cartwright">Isobel_Cartwright </option>
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
                                   
                                      </select>
   </td>
@@ -110,6 +122,7 @@
   <td>
   <td>
   <select  name="time">
+<<<<<<< HEAD
                                      <option size= "" type="text" class=" text form-control" value="9am">9am</option>
                                     <option size= "" type="text" class=" text form-control"   value="10 am ">10am</option>
                                     <option size= "" type="text" class=" text form-control" value="11 am">11am</option>
@@ -120,6 +133,13 @@
                                     <option size= "" type="text" class=" text form-control"   value="4pm">4pm</option>
                                     <option size= "" type="text" class=" text form-control" value="5pm">5pm</option>
                                     <option size= "" type="text" class=" text form-control" value="6pm">6pm</option>
+=======
+                                     <option size= "" type="text" class=" text form-control" value="9am">9 am   </option>
+                                    <option size= "" type="text" class=" text form-control"   value="10 am ">10 am  </option>
+                                    <option size= "" type="text" class=" text form-control" value="11 am">11 am   </option>
+                                    <option size= "" type="text" class=" text form-control"   value="12pm">12 pm   </option>
+                                    <option size= "" type="text" class=" text form-control" value="1pm">1 pm </option>
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
                                   
                                      </select>
   </td>
@@ -128,6 +148,7 @@
 Session End:
 <select name="timz">
  
+<<<<<<< HEAD
                                     <option size= "" type="text" class=" text form-control"   value="10am ">10am</option>
                                     <option size= "" type="text" class=" text form-control" value="11am">11am</option>
                                     <option size= "" type="text" class=" text form-control"   value="12pm">12pm</option>
@@ -138,6 +159,12 @@ Session End:
                                     <option size= "" type="text" class=" text form-control" value="5pm">5pm</option>
                                     <option size= "" type="text" class=" text form-control" value="6pm">6pm</option>
                                     <option size= "" type="text" class=" text form-control" value="7pm">7pm</option>
+=======
+                                    <option size= "" type="text" class=" text form-control"   value="10 am ">10 am  </option>
+                                    <option size= "" type="text" class=" text form-control" value="11 am">11 am   </option>
+                                    <option size= "" type="text" class=" text form-control"   value="12pm">12 pm   </option>
+                                    <option size= "" type="text" class=" text form-control" value="1pm">1 pm </option>
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
                                     </select>
 
 </td>

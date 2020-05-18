@@ -42,7 +42,11 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
 }
  
 // Check the login variable now to see if it is true or not. If it is true, redirect.
+<<<<<<< HEAD
 if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
+=======
+if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepagetutor.php");
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
  
 ?>
  

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="UpdatingForm">
   <form method="post" action="server.php" >
   &nbsp;
@@ -72,3 +73,29 @@
 
 
   
+=======
+<?php
+   		$connect = mysqli_connect("localhost", "root", "root", "c9") or die("summut gungan rong");
+           if (isset($_POST['submit'])) {
+            $newName = $_POST['statue'];
+            $id  	 = $_POST['ids'];
+    
+       
+            
+           //insert the data into
+            $query = "UPDATE booking SET status='$newName' WHERE id='$id'";
+            $results =  mysqli_query($connect, $query);
+
+    if($results)
+    {
+    header("refresh:1; url=books.php"); 
+    }
+    else 
+    {
+    echo"booo";
+    }
+           }
+ ?>
+
+ 
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8

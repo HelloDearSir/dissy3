@@ -88,6 +88,7 @@ if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
         <div class="row">
 
 <div class=" LoginBoxContainer col-xs-12 col-md-6">
+<<<<<<< HEAD
 
  <h3>Existing users  </h3>
 
@@ -132,6 +133,50 @@ if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
 <p> If you are a tutor and don't have a log in please <a href="sign_upTutor.php"> Sign up</a>
 <a class= "btn btn-default btn-primary form-control" href="sign_upTutor.php">Sign up</a>
 </div>
+=======
+
+ <h3>Existing users  </h3>
+
+    <form action="login.php" method="post">
+
+        <fieldset>
+
+        <div>
+            <label>Username</label>
+                <input size ="17" type= "text" class="Medium Text form-control" size"20" maxlengh= "15" name="username">
+                </div>
+
+            <div>
+
+           <label> Password </label>
+
+            <input size ="17" type= "password" size"20" maxlengh= "15" name="password" class="Medium Text form-control">
+
+             </div>
+             <div class="next loginbutton">
+
+           <input type="submit" value="login" class="btn btn-primary form-control">
+
+             </div>
+
+             </fieldset>
+
+             </form>
+ 
+ </div>
+
+
+
+<div class="col-xs-12 col-md-6">
+
+<h3> Not Registered?</h3>
+<p> If  you are a student and don't have a log in please <a href="sign_up.php">Click here</a>     </p>
+<a class= "btn btn-default btn-primary form-control" href="sign_up.php">Sign up</a>
+
+<p> If you are a tutor and don't have a log in please <a href="sign_upTutor.php"> Sign up</a>
+<a class= "btn btn-default btn-primary form-control" href="sign_upTutor.php">Sign up</a>
+
+>>>>>>> 60e53da2d963d01990f9348501812428236030e8
     </div>
      </div>
         </div>
