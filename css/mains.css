@@ -1,46 +1,154 @@
-/*
-Error: Invalid CSS after "...style-type:none": expected "{", was "; "
-        on line 16 of C:\UwAmp\www\prco304-final-year-project-HelloDearSir-master\dissy3\css\mains.scss
+body {
+  overflow-x: hidden; }
 
-11: 
-12: .ButtonPAdding
-13: {
-14:     padding-top:10px;
-15: <<<<<<< HEAD
-16:     list-style-type:none; 
-17:     
-18:    
-19: }
-20:  .ButtonPAdding:nth-child(5n+1){
-21:      
+.loginbutton {
+  padding-top: 15px; }
 
-Backtrace:
-C:\UwAmp\www\prco304-final-year-project-HelloDearSir-master\dissy3\css\mains.scss:16
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:22:in `load'
-C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...style-type:none\": expected \"{\", was \"; \"\A         on line 16 of C:\UwAmp\www\prco304-final-year-project-HelloDearSir-master\dissy3\css\mains.scss\A \A 11: \A 12: .ButtonPAdding\A 13: {\A 14:     padding-top:10px;\A 15: <<<<<<< HEAD\A 16:     list-style-type:none; \A 17:     \A 18:    \A 19: }\A 20:  .ButtonPAdding:nth-child(5n+1){\A 21:      "; }
+.ButtonPAdding {
+  padding-top: 10px;
+  list-style-type: none; }
+
+.Paddingfam {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.navbar {
+  background: #fffdd0; }
+  .navbar .navbar-nav .nav-link {
+    color: #00008b; }
+
+.btn-primary {
+  background: #fffdd0;
+  color: #00008b; }
+
+.WrongData {
+  position: absolute;
+  top: 56%;
+  left: 14%;
+  color: red; }
+
+/* New message box */
+#newcontact {
+  box-shadow: 2px 10px 30px;
+  position: fixed;
+  top: 20%;
+  background: white;
+  z-index: 1;
+  left: 50%;
+  font-family: newfont;
+  /*transform is x,y.*/
+  transform: translate(-300px, 0);
+  border-radius: 5px;
+  overflow: auto;
+  display: none;
+  width: 50em; }
+  #newcontact .header {
+    font-size: 50px;
+    text-align: center; }
+  #newcontact .header, #newcontact .footer {
+    background: #6969;
+    margin: 0px;
+    color: white;
+    padding: 5px; }
+  #newcontact .body {
+    padding: 5px; }
+
+@media (max-width: 767px) {
+  #msgbox {
+    position: relative;
+    left: -8%;
+    height: 30%; } }
+@media (max-width: 991px) {
+  #newcontact {
+    width: 75%;
+    left: 55%;
+    overflow-x: hidden; } }
+/*For the table */
+table {
+  position: relative;
+  top: 150px;
+  width: 50%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border-radius: 10%;
+  background-color: white;
+  /* Deleting  styling*/
+  /* tick styling*/ }
+  table tr {
+    border-bottom: 1px solid #cbcbcb; }
+    table tr:hover {
+      background: #e9e9e9; }
+  table th {
+    font-size: 19px;
+    color: #6b8e23;
+    text-align: left; }
+  table #ls {
+    position: relative;
+    left: 300px; }
+  table th, table td {
+    border: none;
+    height: 30px;
+    padding: 2px;
+    text-align: left; }
+  table .delete, table .tick {
+    text-align: center;
+    position: relative;
+    left: 10px; }
+  table .delete a {
+    color: white;
+    background: red;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+    width: 10px; }
+  table .tick a {
+    color: white;
+    background: green;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+    width: 10px; }
+
+.tablez, .SessionTable {
+  position: initial !important; }
+  .tablez .tables, .SessionTable .tables {
+    position: initial !important; }
+    .tablez .tables .tasksnames, .SessionTable .tables .tasksnames {
+      position: initial !important; }
+    .tablez .tables .taskdelete, .SessionTable .tables .taskdelete {
+      position: inherit !important;
+      left: 0 !important;
+      text-align: initial !important; }
+
+.availablive {
+  display: none !important; }
+
+.recivers .Main p, .users .Mains p {
+  font-weight: bold; }
+
+.UpdatingForm {
+  position: absolute;
+  z-index: 2;
+  top: 23%;
+  border: 1px solid;
+  box-shadow: 2px 10px 30px;
+  background: white;
+  z-index: 1;
+  font-family: newfont;
+  border-radius: 5px;
+  overflow: auto;
+  display: none;
+  width: 20%; }
+  .UpdatingForm .btns {
+    margin-left: 36%; }
+  .UpdatingForm .Headings {
+    overflow-x: hidden; }
+    .UpdatingForm .Headings p {
+      float: right;
+      width: 10%;
+      cursor: pointer;
+      margin-right: 10%; }
+    .UpdatingForm .Headings h3 {
+      margin-left: 36%; }
+
+/*# sourceMappingURL=mains.css.map */

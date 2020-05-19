@@ -1,5 +1,5 @@
 
-body 
+body
 {
     overflow-x: hidden;
 }
@@ -12,29 +12,20 @@ body
 .ButtonPAdding
 {
     padding-top:10px;
-<<<<<<< HEAD
-    list-style-type:none; 
-    
-   
-}
- .ButtonPAdding:nth-child(5n+1){
-     
-        display: none;
-    
-        
- }
-=======
+
     list-style-type:none;
+
+
 }
- 
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
-.Paddingfam 
+
+
+.Paddingfam
 {
     padding-top:15px;
     padding-bottom:15px;
 }
 
-.navbar 
+.navbar
 {
     background:#fffdd0 ;
 
@@ -52,11 +43,7 @@ body
 {
     background:#fffdd0;
     color:#00008b;
-    
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
+
 }
 
 .WrongData{
@@ -67,7 +54,7 @@ body
     }
 
     /* New message box */
-    #newcontact 
+    #newcontact
     {
         box-shadow: 2px 10px 30px;
         position: fixed;
@@ -82,7 +69,7 @@ body
             overflow: auto;
             display: none;
         width: 50em;
-    
+
 
         .header
         {
@@ -108,15 +95,15 @@ body
       #msgbox
     {
             position: relative;
-     
-             left: -8%; 
+
+             left: -8%;
             height: 30%;
     }
     }
 
     @media (max-width:991px)
 {
-  #newcontact 
+  #newcontact
   {
     width: 75%;
     left:55%;
@@ -134,7 +121,7 @@ table
 	border-collapse: collapse;
      border-radius: 10%;
     background-color: white;
- 
+
 tr
 
 {
@@ -163,7 +150,7 @@ th, td
      text-align: left;
 }
 
- 
+
 
 .delete, .tick
 {
@@ -203,7 +190,7 @@ th, td
 {
     position: initial !important;
 }
-.taskdelete 
+.taskdelete
 {
     position: inherit !important;
     left:0 !important;
@@ -221,16 +208,16 @@ th, td
 {
     font-weight: bold;
 }
-<<<<<<< HEAD
 
-.UpdatingForm 
+
+.UpdatingForm
 {
 position: absolute;
 z-index: 2;
 top: 23%;
 border: 1px solid;
 box-shadow: 2px 10px 30px;
- 
+
 background: white;
 z-index: 1;
  font-family: newfont;
@@ -239,29 +226,25 @@ overflow: auto;
  display:none;
 width: 20%;
 
-.btns 
+.btns
 {
     margin-left: 36%;
 }
-.Headings 
-{ 
+.Headings
+{
     overflow-x:hidden;
-    p 
+    p
     {
         float: right;
         width:10%;
         cursor: pointer;
         margin-right:10%;
     }
- h3 
+ h3
  {
     margin-left: 36%;
  }
 
-} 
-    }
-=======
-=======
 }
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
+    }
+ 
