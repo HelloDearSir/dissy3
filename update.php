@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+ 
 <div class="UpdatingForm">
-  <form method="post" action="server.php" >
+  <form method="post" action="Updating.php" >
   &nbsp;
   <div class="Headings">
   <div class="row"> 
@@ -72,8 +72,7 @@
      </div>
 
 
-  
-=======
+ 
 <?php
    		$connect = mysqli_connect("localhost", "root", "root", "c9") or die("summut gungan rong");
            if (isset($_POST['submit'])) {
@@ -98,4 +97,4 @@
  ?>
 
  
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
+ 
