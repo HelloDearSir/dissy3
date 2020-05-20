@@ -8,15 +8,7 @@
 		                   require 'connection.php';
 	// select distinct only gets the different values that is in the system. else there be a ton of Jon_Barton in the contracts.
 	    $query ='SELECT DISTINCT `messagee`, `messager`
-<<<<<<< HEAD
 	FROM `chat` WHERE `messager`= "'.$_SESSION['username'].'"  ';
-=======
-<<<<<<< HEAD
-	FROM `chat` WHERE `messager`= "'.$_SESSION['username'].'"  ';
-=======
-	FROM `chat` WHERE `messager`= "'.$_SESSION['Username'].'"  ';
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
 $results = mysqli_query($connect,$query);
  //if $results true, then continue.
  if($results){
@@ -31,15 +23,7 @@ $results = mysqli_query($connect,$query);
 			$user_sender= $row['messager'];
 			$Ureciver= $row['messagee'];
 		//session = the sender, then continue with getting the contacts
-<<<<<<< HEAD
 					if($_SESSION['username']== $user_sender)
-=======
-<<<<<<< HEAD
-					if($_SESSION['username']== $user_sender)
-=======
-					if($_SESSION['Username']== $user_sender)
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
 									{
                  //add the reciver but only once
 	               //checking the array to see who the user has talked to.
@@ -67,4 +51,3 @@ $results = mysqli_query($connect,$query);
         ?>
 		   </div>
 	</div>
- 
