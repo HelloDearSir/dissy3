@@ -1,6 +1,15 @@
 
 <?php  include('Updating.php'); ?>
+<?php
+    session_start();
+    if($_SESSION['login'] != "That GRRRRREAT")
 
+{
+  exit(header('Location: login.php'));
+ 
+          }
+
+?>
 <?php 
  
 
@@ -111,7 +120,7 @@
                                         <td class = "task"><?php echo $date;?> </td>
                                         <td> &nbsp;</tb>
                                         <td class = "task" name="Statuez">  <?php echo $row['status']?><td>
-                                        <td class="update" id ="tick"  name="update"><a href="index.php?edit=<?php echo $row['id'];?>"> &#9989;</a></td>
+                                        <td class="update" id ="tick"  name="update"><a href="books.php?edit=<?php echo $row['id'];?>"> &#9989;</a></td>
                                         <td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
                                     </tr>
                                         <?php }

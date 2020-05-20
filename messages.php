@@ -84,7 +84,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 			</div>
 			<div class=" col-12 col-md-10">
 				<form method="post" id="message-form" >  
-				<input class="textarea" id="message_text" placeholder= "Write your message"/>
+				<textarea class="textarea" id="message_text" placeholder= "Write your message"></textarea>
 											</div>
 	  			</div>
 							</div>
@@ -94,39 +94,34 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 </body>
 <script src="jquery-3.1.1.min.js"> </script>
 <script>
-$("document").ready(function(e) 
+$("document").ready(function(event) 
 {
 	//now if the fomr is sumbitted 
-	$("#message-form").on('submit',  function(){
+	$("#rightside").on('submit', 'message-form', function(){
 		//take the data from input 
    var message_text = $("#message_text").val();
 		//post it to sned.php
-   $.ajax({ 
-	  type:"POST",
-	  url:"send.php?user=<?php echo $_GET['user']?>",
-	  data:{
-	   text:message_text,
+   $.post("send.php?user=<?php echo $_GET['user']?>",
+   { text:message_text,
 	
    },
-   success:function(data)
+   function(data,status)
    {
-	   
-	   $("#message_text").val(),
+	   alert(data);
+	   $("#message_text").val("");
 	   document.getElementById("mainmessages").innerHTML += data;
    }
-   });
+   		);
 	});
-	$("#message-form").keypress(function(e)
+	$("#rightside").keypress(function(e)
 	{
 				 //sumbits when enter is only pressed 
      if(e.keyCode == 13 && !e.shiftKey)
 	 {
-		 $("#message_text").submit();
+		 $("#message-form").submit();
 
 	 }
 	});
 });
-
-
 </script>
 </html>

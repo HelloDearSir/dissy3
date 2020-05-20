@@ -1,13 +1,4 @@
-<?php
-    session_start();
-    if($_SESSION['login'] != "That GRRRRREAT")
 
-{
-  exit(header('Location: login.php'));
- 
-          }
-
-?>
    <div class = "container">
    <div class= "row">
    <h1> S2T </h1>
