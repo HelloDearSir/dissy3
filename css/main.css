@@ -1,5 +1,7 @@
- 
- 
+
+.xdebug-error.xe-notice {
+  display: none;
+}
 
 @font-face {
  font-family: newfont;
@@ -8,19 +10,24 @@
 
 
 	 p {
-=======
-	a, p {
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
 		font-size :1.5em;
 		font-family: helvetic;
     color: black;
 
 	}
-  hr.stlye
-{
 
-border-bottom: 10px solid #00000;
+	a
+	{
+		text-decoration: none;
+	 color: blue;
+	}
+
+
+
+body{
+
 }
+
 
 .tesx
 {
@@ -34,20 +41,19 @@ border-bottom: 10px solid #00000;
 
 	box-shadow: 2px 10px 30px;
 	position: fixed;
-
 	top: 20%;
-	background: #ffffff;
-	z-index:2;
+	background: white;
+	z-index:1;
 	left:50%;
+	font-family: newfont;
         /*transform is x,y.*/
-	transform: translate(-300px,0);
-	border-radius: 5px;
-	overflow: auto;
-	display: none;
-        width: 50em;
+		transform: translate(-300px,0);
+		border-radius: 5px;
+		overflow: auto;
+		display: none;
+    width: 50em;
 
 	}
-<<<<<<< HEAD
    @media (max-width:768px)
    {
      #newcontact 
@@ -60,7 +66,6 @@ border-bottom: 10px solid #00000;
     width: 80%;
    }
 }
-<<<<<<< HEAD
 
 @media (max-width:991px)
 {
@@ -75,46 +80,28 @@ border-bottom: 10px solid #00000;
  width: 100%;
 }
 
-=======
-
-@media (max-width:991px)
-{
-  #newcontact 
-  {
-    width: 75%;
-    left:55%;
-    overflow-x: hidden;
-  }
-#newcontact .form-control
-{
- width: 100%;
-}
-
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
 
 }
-=======
-
->>>>>>> parent of b50c7b2... working version so far
 /* New message box */
 .header, .footer
 {
-	background: #696969; margin:0px;
+	background: #6969; margin:0px;
 	color:white;
 	padding:5px;
 }
 
-.header {
-font-size :50px;
-text-align: center;
-
+.header
+{
+	font-size :50px;
+	text-align: center;
 }
 
-.body{
+.body
+{
 	padding:5px;
 }
 
-
+/* 
 .minputU
 {
     width:30%;
@@ -122,13 +109,11 @@ text-align: center;
     top:5.9em;
     position: absolute;
     padding:6px;
-background: #efefef;
-margin: 2px;
+		background: #efefef;
+		margin: 2px;
 }
-
 .minput
 {
-
     padding:6px;
     background: #efefef;
     margin: 2px;
@@ -140,32 +125,23 @@ margin: 2px;
     }
 #submit
 {
-    color:grey;
+		color:black;
     position: relative;
     left:10em;
     margin: 2px 0px 4px 10px;
     padding: 2px 5px 5px;
     top:10px;
 }
-
 .cancel
 {
-    color:grey;
+    color:black;
     position: relative;
     left:10em;
     margin: 2px 0px 4px 10px;
     padding: 2px 5px 5px;
     top:10px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
 /*  containers
-=======
-/*  containers */
->>>>>>> parent of b50c7b2... working version so far
 #container{
 	box-shadow:2px 2px 10px #000000;
 	width:1000px;
@@ -176,147 +152,84 @@ margin: 2px;
  	position: relative;
 	top: 50px;
   background: white;
-=======
-/*  containers */
-	#container{
-		box-shadow:2px 2px 10px #000000;
-	width:1200px;
- height:90%;
-margin:2% auto;
-border-radius: 1%;
-overflow:hidden;
- position: relative;
-top: -15px;
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
-
  }
-
-
 #meni
 {
   background:#696969;
   color:white;
   padding:1%;
   font-size:30px;
-}
+} */
 
 #leftside, #rightside
 {
   position: relative;
-  top: 60px;
+  top: 50px;
   float:left;
-  height:90%;
-    border: 1px solid black;
+  height:40%;
+
 }
 #leftside
 {
   width:30%;
+
 }
 #rightside
 {
   width:60%;
 }
 
-#left-col-container
+#contactsside
 {
-  width:100%;
-  margin: 0px auto;
-   height:100%;
-   overflow: auto;
+
+    width:100%;
+  	margin: 0px auto;
+   	height: 42em;
+
 }
-<<<<<<< HEAD
 #msgbox
 {
-		position: fixed;
-  	top: 500px;
+		position: relative;
+    /* top: 500px; */
+    top:10%;
 		width: 40%;
-		left: 35%;
+		 left: 5%; 
 		height: 30%;
-=======
-#msgform
-{ position: fixed;
-  top: 550px;
-	width: 40%;
-	left: 35%;
-	height: 30%;
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
+}
+
+@media (max-width:767px)
+{
+  #msgbox
+{
+		position: relative;
+ 
+		 left: -8%; 
+		height: 30%;
 }
 }
 .contact
 {
-border:1px solid black;
-padding:5px;
-background: white;
-margin: 2px;
-
-overflow:auto;
-}
-.image {
-  float:left;
-  margin-right:5px;
-  width:50px;
-  height: 50px;
+	border:1px solid black;
+	padding:5px;
+	background: white;
+	margin: 2px;
+	overflow:auto;
 }
 
 #mainmessages
-<<<<<<< HEAD
 	{
     	overflow:auto ;
      	position: relative;
-     	left:-50px;
+      
         width: 100%;
 				height: 400px;
-<<<<<<< HEAD
         border: 1px solid; 
-<<<<<<< HEAD
-=======
 
->>>>>>> parent of b50c7b2... working version so far
-
-=======
-=======
-{
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
-
-    overflow:auto ;
-   position: relative;
-        width: 50%;
-height: 70%;
-top:40px;
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
 }
-
 .nMess
 {
     cursor: pointer;
     font-size: 20px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 100%; 
-=======
-    width: 100%;
-    margin: 2px;
-		padding: 2px;
->>>>>>> parent of b50c7b2... working version so far
-    border: 1px solid black;
-    height: 20px;
-    position: relative;
-<<<<<<< HEAD
-   }
-
-   @media(max-width:767px)
-   {
-     .nMess 
-     {
-        font-size: 14px;
-     }
-     .contact 
-     {
-       font-size:14px;
-     }
-   }
-=======
-<<<<<<< HEAD
     width: 100%; 
     border: 1px solid black;
   
@@ -334,40 +247,27 @@ top:40px;
        font-size:14px;
      }
    }
-=======
-    width: 100%;
-    margin: 2px;
-    border: 1px solid black;
-    height: 20px;
-}
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
-=======
-    top:-10px;
-
-}
->>>>>>> parent of b50c7b2... working version so far
-.textarea
+/* .textarea
 {
 	width:45%;
 	height: 5%;
 	border: 1px solid #efefe;
 	position: fixed;
-bottom:4%;
-    left: 36.7%;
+  bottom:4%;
+  left: 36.7%;
 	margin:0px auto;
-    border-radius: 3px;
-    box-shadow: 10px solid black;
+  border-radius: 3px;
+  box-shadow: 10px solid black;
 
-}
+} */
 
 .users, .recivers
 {
 	border: 1px solid black;
-	width:90%;
-	padding:1px;
-	margin:0px auto;
-	margin-top:1%;
+	width:400px;
+	padding:0px 20px;
+	margin:10px auto;
+position: relative;
 	overflow: auto;
     background: #efefef;
 
@@ -379,9 +279,8 @@ bottom:4%;
 }
 .recivers
 {
-	background: #ffff;
+	background: white;
 }
-<<<<<<< HEAD
 
 @media only screen and (min-width: 360px) and (max-width: 500px) and (max-height:812px)
 {
@@ -469,13 +368,7 @@ bottom:4%;
     { display: none;
 
     }
-  #container
-    	{
-        position: relative;
-        left:-15px;
-        width:500px;
-    }
-
+  
     #leftside
     {
         position: relative;
@@ -523,8 +416,8 @@ font-size: 10px;
 .minputs
 {
 	position: relative;
-	left:-80px;
-	top: 50px;
+  left: 14%;
+  top: 4px;
 	width:200px;
 	z-index: 1;
 }
@@ -547,5 +440,3 @@ font-size: 10px;
 
 
 		}
-=======
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
