@@ -14,6 +14,7 @@
   The  username is : Jon_Barton
  The password  is:Password
 
+<<<<<<< HEAD
 
   The  Username is : Jon_Barton
  The password  is:pASSOWRD
@@ -412,3 +413,5 @@ The password  is: 12
 The username is: 12
 The password  is: 12
 
+=======
+>>>>>>> parent of b50c7b2... working version so far

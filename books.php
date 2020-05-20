@@ -4,7 +4,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 	header('Location: login.php');
 	exit();
 } else {
-	$username = $_SESSION['username'];
+	$username = $_SESSION['Username'];
 }
 ?>
 
@@ -33,6 +33,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 
 <!DOCTYPE html>
 <html lang="en-GB">
+<<<<<<< HEAD
 <<<<<<< HEAD
  <style> 
 .modal {
@@ -74,6 +75,27 @@ if($_SESSION['login'] != "That GRRRRREAT") {
   font-size: 28px;
   font-weight: bold;
 }
+=======
+    <head>
+        <title>test2.php</title>
+        <link rel="stylesheet" href="css/booking.css">
+				<meta content="width=device-width, initial-scale=1" name="viewport" />
+		 <meta charset="utf-8">
+        		<script src="main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+			<div id ="nav">
+				<label for="toggle">&#9776;</label>
+				<input type="checkbox" id="toggle">
+				<div class = "menu">
+					<a href="profilepage.php"><?php  echo $_SESSION['Username']; ?> </a>
+						<a href="messages.php">Messages  </a>
+							<a href="book.php">Booking</a>
+							<a href="logout.php"> Log Out </a>
+									</div>
+												</div>
+>>>>>>> parent of b50c7b2... working version so far
 
 .close:hover,
 .close:focus {
@@ -92,6 +114,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
             <h2> Booking</h2>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <?php require 'update.php' ?>
     
@@ -102,11 +125,11 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 =======
          <div class="container">
           <div class="row">
+=======
+>>>>>>> parent of b50c7b2... working version so far
         <input size="20px" size="20px" maxlengh="15" type="text" name="username" id="user" required>
                                 <div id = "filter"></div>
-                                </div>
-                                </div>
-        <table class="table SessionTable">
+        <table>
             <thead>
 >>>>>>> 60e53da2d963d01990f9348501812428236030e8
                 <tr>
@@ -118,6 +141,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
                     <th>&nbsp;</th>
                     <th> Location </th>
                     <th>&nbsp;</th>
+<<<<<<< HEAD
                     <th>Time Start </th>
 <<<<<<< HEAD
                     <th>&nbsp;</th>
@@ -211,39 +235,37 @@ $(".close").click(function() {
 =======
                     <th>&nbsp;</th>
                     <th>Time End</th> 
+=======
+                    <th>Time </th>
+>>>>>>> parent of b50c7b2... working version so far
                     <th>&nbsp;</th>
-                    <th>Date  </th>
+										<th>Date  </th>
 										<th>&nbsp;</th>
-                    <th>Status  </th>
+										<th>Statues </th>
 										<th>&nbsp;</th>
-              
-							
+										<th>Action </th>
+										<th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
 							<?php
-						require 'booking.php';
-                            require 'connection.php';
-                            
+							require 'booking.php';
+							require 'connection.php';
 							//select from tasks db where student = session cookie
-								$query= 'SELECT * FROM  `booking` WHERE `tutor`= "'.$_SESSION['username'].'"';
+								$query= 'SELECT * FROM  `booking` WHERE `tutor`= "'.$_SESSION['Username'].'"';
 								$results = mysqli_query($connect, $query);
 									if ($results)
 										{ //if the query is uccessful then do this.
 											while ($row = mysqli_fetch_assoc($results))
 											{
-                        
 												$tutor= $row['tutor'];
 												$fn= $row['First'];
 												$ln = $row['Last'];
 												$meetplace = $row['location'];
-                        $time = $row['time'];
-                        $timeEnds =$row['timends'];
+												$time = $row['time'];
 												$date = $row['bookingd'];
-                        $phonen = $row['Phone'];
-                        $TutorStatus =$row['status'];
-                        $id = $row['id'];
-												if($tutor == $_SESSION['username'])
+												$phonen = $row['Phone'];
+												if($tutor == $_SESSION['Username'])
 												{ ?>
 													<tr>
 														<td class= "task"> <?php echo $fn; ?></td>
@@ -256,17 +278,13 @@ $(".close").click(function() {
 														<td>&nbsp;</td>
 														<td class = "task"> <?php echo $time;?> </td>
 														<td>&nbsp;</td>
-                            <td class="task"><?php echo $timeEnds;?> </td>
-                            <td>&nbsp; </td>
 														<td class = "task"><?php echo $date;?> </td>
 														<td> &nbsp;</tb>
-                            
-														<td> &nbsp;</tb>
-                                                        <td class = "task" name="Statuez">  <?php echo $row['status']?><td>
-                                                        <td class="accpet" id ="tick"  name="accpetd"><a href="books.php?accpet=<?php echo $row['id'];?>">  &#10004; </a></td>
-                                                        <td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
-														 
- 
+
+															<td class = "colr" id= "color">pending</td>
+
+<td class = "delete"> <a href="books.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+                 <td class="tick" id ="tick"> <a href='#'> &#10004; </a></td>
              </tr>
 
 
@@ -278,8 +296,32 @@ $(".close").click(function() {
 
         </table>
       </div>
-     </div> 
-    </div>  
     </body>
+<<<<<<< HEAD
  </html>
 >>>>>>> 60e53da2d963d01990f9348501812428236030e8
+=======
+<script>
+$(document).ready(function(){
+
+    $('.deletes').css({color:'green'});
+        $('.tick').css({color:'red'});
+    $(".colr").css({color:'orange'});
+
+});
+
+    $(".tick").click(function()
+    {
+        var colors = $(this).data('colr');
+        $("#color").text("accept");
+          // $(".colr").text().replace("pending", "Accept");
+     $("#color").css("color","green");
+
+        //$(this).css("color", "green");
+    });
+
+
+
+    </script>
+</html>
+>>>>>>> parent of b50c7b2... working version so far

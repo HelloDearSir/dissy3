@@ -11,19 +11,20 @@ if (isset($_POST['submit'])) {
     $location = $_POST['location'];
     $dates = $_POST['bookingd'];
     $time = $_POST['time'];
-    $times = $_POST['timz'];
-    $studentusername =$_POST['Sname'];
-    $TutorAviable= $_POST['available'];
-        $query = "INSERT INTO booking(first, Last, StudentUser, Phone, location, tutor,bookingd,time,timends,status) VALUES('$student', '$last','$studentusername', '$phone',  '$location', '$tutor', '$dates', '$time','$times','$TutorAviable')";
+        $query = "INSERT INTO booking(first, Last, Phone,location, tutor,bookingd,time) VALUES('$student', '$last', '$phone',  '$location', '$tutor', '$dates', '$time' )";
     $results = mysqli_query($db, $query);
 //if !$run_query is true then echo this error.
     if($results) {
             //echo that it worked
 <<<<<<< HEAD
+<<<<<<< HEAD
             	header("Location: index.php");
 =======
             	header("Location: Sessions.php");
 >>>>>>> 60e53da2d963d01990f9348501812428236030e8
+=======
+            	header("Location: book.php");
+>>>>>>> parent of b50c7b2... working version so far
       //  echo 'QUERY ok<br />';
 
     } else {
@@ -42,8 +43,10 @@ if(isset($_GET['del_task']))
     header('location:books.php');
 }
 //selecting the db and using tasks to not reuse the task thats already been used to store the data.
+$booking = mysqli_query($db, "SELECT * FROM booking");
 
 
+<<<<<<< HEAD
  
  
 if(isset($_POST['accpetd'])) {
@@ -62,3 +65,6 @@ if(isset($_POST['accpetd'])) {
 
 >>>>>>> 60e53da2d963d01990f9348501812428236030e8
  
+=======
+?>
+>>>>>>> parent of b50c7b2... working version so far
