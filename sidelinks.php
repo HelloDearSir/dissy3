@@ -1,6 +1,6 @@
 <?php
  
- $connect = mysqli_connect("localhost", "root", "root", "test") or die("summut gungan rong");
+ $connect = mysqli_connect("localhost", "root", "root", "c9") or die("summut gungan rong");
 //select from tasks db where student = session cookie
 	$query= 'SELECT * FROM  `tutor` WHERE `Username`= "'.$_SESSION['username'].'"';
 	$results = mysqli_query($connect, $query);

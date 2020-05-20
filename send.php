@@ -8,11 +8,12 @@ if(isset($_SESSION['username']) and isset($_GET['user'])) {
 			$Usender = $_SESSION['username'];
 			$Ureciver = $_GET['user'];
 			$message = $_POST['text'];
-			$query = "INSERT INTO chat(messager, messagee,msg ) VALUES('$Usender', '$Ureciver', '$message')";
+			$query = 'INSERT INTO chat(messager, messagee,msg ) VALUES("'.$Usender.'", "'.$Ureciver.'", "'.$message.'")';
 			$results =  mysqli_query($db, $query);
 			
 			if ($results) {
-				//if $results is true then post the message as the user.
+        //if $results is true then post the message as the user.
+        
 ?>
 
 <div class="user">
@@ -23,7 +24,8 @@ if(isset($_SESSION['username']) and isset($_GET['user'])) {
 <?php
 			} else {
 				//if ($results) is false then do this.
-				echo $query;
+        echo $query;
+        
 			}
 		} else {
 			echo ' please enter some text';

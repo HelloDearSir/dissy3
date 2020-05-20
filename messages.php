@@ -18,7 +18,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
  <meta charset="utf-8">
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<script src="main.js"></script>
+ 
 
 	</head>
 	<body>
@@ -97,7 +97,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 $("document").ready(function(event) 
 {
 	//now if the fomr is sumbitted 
-	$("#rightside").on('submit', 'message-form', function(){
+	$("#rightside").on('submit', '#message-form', function(){
 		//take the data from input 
    var message_text = $("#message_text").val();
 		//post it to sned.php
@@ -105,11 +105,11 @@ $("document").ready(function(event)
    { text:message_text,
 	
    },
-   function(data,status)
+   function(data)
    {
 	   alert(data);
 	   $("#message_text").val("");
-	   document.getElementById("mainmessages").innerHTML += data;
+	   document.getElementById("mainmessages").HTML += data;
    }
    		);
 	});
@@ -118,7 +118,8 @@ $("document").ready(function(event)
 				 //sumbits when enter is only pressed 
      if(e.keyCode == 13 && !e.shiftKey)
 	 {
-		 $("#message-form").submit();
+		 console.log($("#message_text"));
+		//  $("#message-form").submit();
 
 	 }
 	});
