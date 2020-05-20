@@ -12,72 +12,52 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 
 <!DOCTYPE html>
 <html lang="en-GB">
-    <head>
-        <title>test2.php</title>
-        <link rel="stylesheet" href="css/uplaod1.css">
-				<meta content="width=device-width, initial-scale=1" name="viewport" />
-		 <meta charset="utf-8">
-    </head>
+<?php require  'meta.php' ?>
     <body>
-<<<<<<< HEAD
 	<?php require  'headerlogin.php' ?>
-  
-
 					<div class= "container">
 					  <div class="row">
 			   				<div class= "col-sm-3">
 											 
 							   <h3>Useful Links </h3>
-							   
+						 	 
 									<ul>
-									<?php require  'sidelinks.php' ?>     
-     					</ul>     
-		</div>
-							 
+								
+									<li class="ButtonPAdding">  <a href='#' class = "btn btn-primary form-control"> Plymouth University</a></li>
+											<li class="ButtonPAdding">	<a href='https://dle.plymouth.ac.uk' class="btn btn-primary form-control">DLE</a></li>
+											<li class="ButtonPAdding">	<a href='https://www.fotpms.plymouth.ac.uk/SPMS/' class="btn btn-primary form-control">SPMS</a></li>
+										<li class="ButtonPAdding">	<a href='https://outlook.office.com/owa/?wa=wsignin1.0' class="btn btn-primary form-control">University Email</a></li>
+												<li class="ButtonPAdding"><a href='Sessions.php' class="btn btn-primary form-control"> Appointments</a></li>											 
+									</ul>
+								</div>
         <div class= "col-sm-9">
   
-=======
-			<div id ="nav">
-				<label for="toggle">&#9776;</label>
-				<input type="checkbox" id="toggle">
-				<div class = "menu">
-					<a href="profilepage.php"><?php  echo $_SESSION['Username']; ?> </a>
-						<a href="messages.php">Messages  </a>
-							<a href="book.php">Booking</a>
-							<a href="logout.php"> Log Out </a>
-									</div>
-												</div>
-											 <div id = "links">
-									 <p>UseFul links </p>
-									<ul>
-									<li class = "dropdown">  <a href='#' class = "down"> Plymouth University</a>
-												<a href='https://dle.plymouth.ac.uk'>DLE</a>
-												<a href='https://www.fotpms.plymouth.ac.uk/SPMS/'>SPMS</a>
-											<a href='https://outlook.office.com/owa/?wa=wsignin1.0'>University Email</a>
-												<a href='books.php'>See booking</a>
-																									 </li>
-									</ul>
-        <div id= "container">
->>>>>>> parent of b50c7b2... working version so far
 
-
-        <div class="heading">
-            <h2> To do list</h2>
-        </div>
+			<div class= "container">
+			 <div class= "row">
+				<h1> To do List  </h1>
+			 </div>
+			 </div>
         <form method="post" action="profilepage.php">
-
-            <input type="text" name="task" class="tasks" />
-            <button type="submit" class="buttons" name="submit">Add the task</button>
-
+         <div class="container"> 
+		  <div class="row">
+		  <div class="Paddingfam">
+            <input type="text" name="task" class="tasks">
+            <button type="submit" class=" btn-primary" name="submit">Add the task</button>
+			   </div>
+            </div>
+		</div>	 
         </form>
-        <table>
+		<div class="container">
+		 <div class= "row">
+        <table class= "table tablez">
             <thead>
                 <tr>
 
-                    <th>&nbsp;</th>
+                 
                     <th class="taskz">Tasks</th>
                     <th class ="done">Done</th>
-                    <th>&nbsp;</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -95,21 +75,20 @@ require 'connection.php';
 					$task= $row['task'];
 					if($student == $_SESSION['username'])
 					{ ?>
-						<tr>
-							<td class= "task"> <?php echo $task; ?></td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td class = "delete"> <a href="profilepage.php?del_task=<?php echo $row['id'];?>"> X</a></td>
+						<tr class="tables">
+
+							<td class= "task tasksnames"> <?php echo $task; ?></td>
+							<td class = "delete taskdelete"> <a href="profilepage.php?del_task=<?php echo $row['id'];?>"> X</a></td>
 									</tr>
 						<?php // opening a second php tag allows me to display them into the tr tag which is rows.
  						}
     			}
       }
 ?>
-
+     </div>
+	</div> 
         </table>
-        </div>
+    </div>  
+</div>		
     </body>
 </html>

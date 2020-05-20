@@ -415,3 +415,6 @@ The password  is: 12
 
 =======
 >>>>>>> parent of b50c7b2... working version so far
+The username is: Micky_Rowe
+The password  is: Password
+

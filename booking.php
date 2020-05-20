@@ -11,20 +11,15 @@ if (isset($_POST['submit'])) {
     $location = $_POST['location'];
     $dates = $_POST['bookingd'];
     $time = $_POST['time'];
-        $query = "INSERT INTO booking(first, Last, Phone,location, tutor,bookingd,time) VALUES('$student', '$last', '$phone',  '$location', '$tutor', '$dates', '$time' )";
+    $times = $_POST['timz'];
+    $studentusername =$_POST['Sname'];
+    $TutorAviable= $_POST['available'];
+        $query = "INSERT INTO booking(first, Last, StudentUser, Phone, location, tutor,bookingd,time,timends,status) VALUES('$student', '$last','$studentusername', '$phone',  '$location', '$tutor', '$dates', '$time','$times','$TutorAviable')";
     $results = mysqli_query($db, $query);
 //if !$run_query is true then echo this error.
     if($results) {
             //echo that it worked
-<<<<<<< HEAD
-<<<<<<< HEAD
-            	header("Location: index.php");
-=======
             	header("Location: Sessions.php");
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
-=======
-            	header("Location: book.php");
->>>>>>> parent of b50c7b2... working version so far
       //  echo 'QUERY ok<br />';
 
     } else {
@@ -32,9 +27,6 @@ if (isset($_POST['submit'])) {
       //  echo 'QUERY failed -- ';
     }
 }
-<<<<<<< HEAD
- 
-=======
 //deleting the task.
 if(isset($_GET['del_task']))
 {
@@ -43,28 +35,16 @@ if(isset($_GET['del_task']))
     header('location:books.php');
 }
 //selecting the db and using tasks to not reuse the task thats already been used to store the data.
-$booking = mysqli_query($db, "SELECT * FROM booking");
 
 
-<<<<<<< HEAD
  
  
 if(isset($_POST['accpetd'])) {
   $id = $_POST['ids'];
  
   if(!empty($id)) {
-<<<<<<< HEAD
-  mysqli_query($db, "UPDATE booking SET status = 'test' WHERE id ='{$id}' ");
-=======
   mysqli_query($db, "UPDATE booking SET statues = 'test' WHERE id ='{$id}' ");
->>>>>>> 4821221142a69996b6411f3f65680deae984cc36
   }
           } 
 
 
-
->>>>>>> 60e53da2d963d01990f9348501812428236030e8
- 
-=======
-?>
->>>>>>> parent of b50c7b2... working version so far
