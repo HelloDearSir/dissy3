@@ -97,31 +97,34 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 $("document").ready(function(event) 
 {
 	//now if the fomr is sumbitted 
-	$("#rightside").on('submit', '#message-form', function(){
-		//take the data from input 
-   var message_text = $("#message_text").val();
+	$("#message-form").on('submit', function(event){
+		event.preventDefault();
+    
+		//take the data from input
+		var message_text = $("#message_text").val();
 		//post it to sned.php
-   $.post("send.php?user=<?php echo $_GET['user']?>",
-   { text:message_text,
-	
-   },
-   function(data)
-   {
-	   alert(data);
-	   $("#message_text").val("");
-	   document.getElementById("mainmessages").HTML += data;
-   }
-   		);
+		$.post("send.php?user=<?php echo $_GET['user']?>", {text:message_text}, function(data,status) {
+			alert(data);
+			$("#message_text").val("");
+			document.getElementById("mainmessages").innerhtml += data;
+			
+			// refresh page
+			location.reload();
+		});
 	});
 	$("#rightside").keypress(function(e)
 	{
+
 				 //sumbits when enter is only pressed 
      if(e.keyCode == 13 && !e.shiftKey)
 	 {
-		 console.log($("#message_text"));
-		//  $("#message-form").submit();
+		 
+		$("#message-form").submit();
+	
 
+// console.log($("#message_text").val());
 	 }
+
 	});
 });
 </script>
