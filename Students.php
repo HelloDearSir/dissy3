@@ -20,7 +20,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
         </div>
          <div class="container">
           <div class="row">
-        <table class="table">
+        <table class="table SessionTable">
             <thead>
                 <tr>
                
