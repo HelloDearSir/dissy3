@@ -17,6 +17,7 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
  <meta charset="utf-8">
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			  <script src="main.js"></script>
 
  
 
@@ -92,7 +93,8 @@ if($_SESSION['login'] != "That GRRRRREAT") {
 										 </div>
 							</div>
 </body>
-<script src="jquery-3.1.1.min.js"> </script>
+ 
+</html>
 <script>
 $("document").ready(function(event) 
 {
@@ -103,7 +105,11 @@ $("document").ready(function(event)
 		//take the data from input
 		var message_text = $("#textarea").val();
 		//post it to sned.php
-		$.post("send.php?user=<?php echo $_GET['user']?>", {text:message_text}, function(data,status) {
+		$.post("send.php?user=<?php echo $_GET['user']?>",
+   { text:message_text,
+	
+   },
+    function(data,status) {
 			alert(data);
 			$("#message_text").val("");
 			document.getElementById("mainmessages").innerhtml += data;
@@ -122,10 +128,8 @@ $("document").ready(function(event)
 		$("#messagebox").submit();
 	
 
-// console.log($("#message_text").val());
 	 }
 
 	});
 });
 </script>
-</html>
