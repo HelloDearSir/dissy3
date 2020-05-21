@@ -9,7 +9,7 @@ $Usender = $_SESSION['username'];
 $Ureciver = $_GET['user'];
 $message = $_POST['text'];
 $query = 'INSERT INTO chat(messager, messagee,msg ) VALUES("'.$Usender.'", "'.$Ureciver.'", "'.$message.'")';
-$results =  mysqli_query($db, $query);
+$results =  mysqli_query($connect, $query);
 			
 if ($results) {
         //if $results is true then post the message as the user.
