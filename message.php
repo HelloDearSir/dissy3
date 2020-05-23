@@ -1,7 +1,7 @@
 <?php
     $db = mysqli_connect("localhost", "root", "root", "c9") or die("QUERY failed". mysqli_error($db));
   if (isset($_POST['send'])) {
-        $sender_name = $_SESSION['Username'];
+        $sender_name = $_SESSION['username'];
         //use user as username is a cookie.
         $reciver = $_POST['user'];
         $message = $_POST['nmess'];

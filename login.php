@@ -88,7 +88,7 @@ if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
         <div class="row">
 
 <div class=" LoginBoxContainer col-xs-12 col-md-6">
- 
+
  <h3>Existing users  </h3>
 
     <form action="login.php" method="post">
@@ -124,13 +124,14 @@ if($_SESSION['login'] == "That GRRRRREAT") header("Location: profilepage.php");
 <div class="col-xs-12 col-md-6">
 
 <h3> Not Registered?</h3>
+<div>
 <p> If  you are a student and don't have a log in please <a href="sign_up.php">Click here</a>     </p>
 <a class= "btn btn-default btn-primary form-control" href="sign_up.php">Sign up</a>
-
+</div>
+<div>
 <p> If you are a tutor and don't have a log in please <a href="sign_upTutor.php"> Sign up</a>
 <a class= "btn btn-default btn-primary form-control" href="sign_upTutor.php">Sign up</a>
-
- 
+</div>
     </div>
      </div>
         </div>

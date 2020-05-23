@@ -40,7 +40,7 @@ require 'php/sig_up.php';
                                     <div>
                                    
 			<label>Username:</label>
-			<input name="username" type="text" id="username" class="form-control" onBlur="checkAvailability()"><span id="user-availability-status"></span>    
+			<input name="username" type="text" id="username" class="form-control" onBlur="checkAvailability()"/><span id="user-availability-status"></span>    
 	                
                                    </div>
                                     <div>

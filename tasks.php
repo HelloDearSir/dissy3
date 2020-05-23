@@ -1,7 +1,7 @@
 <?php
 $db = mysqli_connect("localhost", "root", "root", "c9") or die("QUERY failed". mysqli_error($db));
         if (isset($_POST['task'])) {
-                    $student = $_SESSION['Username'];
+                    $student = $_SESSION['username'];
                     $task = $_POST['task'];
                     $query = "INSERT INTO tasks(task, student) VALUES('$task', '$student')";
                     $results = mysqli_query($db, $query);
@@ -13,7 +13,7 @@ $db = mysqli_connect("localhost", "root", "root", "c9") or die("QUERY failed". m
     else
       {
     //if it fails then do this.
-      //  echo 'QUERY ';
+       echo 'QUERY ';
     }
 }
   //deleting the task.
