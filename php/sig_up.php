@@ -16,13 +16,14 @@
  
         if (strcmp($new_pass, $confirm_pass) !== 0)
         {
-            echo 'Passwords did not match';
+            echo '<p class="WrongData"Passwords did not match</p>';
         // $query = "SELECT * FROM c9 WHERE Username=$new_user ";
-        $hashed = hash('sha512', $new_pass);
+       
 	
         }
         else 
-        {
+        { 
+            $hashed = hash('sha512', $new_pass);
             $insert = "INSERT INTO users(Username, Password, University, dsaTutor, Study,Firstname, Lastname)
             VALUES ('$new_user', '$hashed', '$Universty', '$DsaTutor', '$TypeOfStudy', '$Firstname', '$Lastname')";
    $results = mysqli_query($connect, $insert);

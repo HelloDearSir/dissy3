@@ -20,12 +20,9 @@
         <a class="nav-link" href="index.php">Home </a>
       </li>
       <li>
-        <a class="nav-link" href="login.php"> Student Log In</a>
+        <a class="nav-link" href="login.php">  Log In</a>
       </li>
     
-      <li>
-        <a class="nav-link" href="TutorLogin.php"> Tutor Log In</a>
-      </li>
      
     </ul>
    </div>
