@@ -23,7 +23,7 @@
         }
         else 
         { 
-            $hashed = hash('sha512', $new_pass);
+            $hashed = md5(sha1($new_pass));
             $insert = "INSERT INTO users(Username, Password, University, dsaTutor, Study,Firstname, Lastname)
             VALUES ('$new_user', '$hashed', '$Universty', '$DsaTutor', '$TypeOfStudy', '$Firstname', '$Lastname')";
    $results = mysqli_query($connect, $insert);
