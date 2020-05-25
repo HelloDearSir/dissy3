@@ -8,7 +8,7 @@ if(isset($_POST['username']))
     $username = mysqli_real_escape_string($db, ($_POST["username"]));
     if(!empty($username))
     {
-        $query ="SELECT * FROM users WHERE Username ='$username'";
+        $query ="SELECT * FROM tutor WHERE Username ='$username'";
       $results = mysqli_query($db, $query);
         
   

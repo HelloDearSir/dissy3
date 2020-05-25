@@ -248,3 +248,15 @@ width: 20%;
 }
     }
  
+    span 
+    {
+        .status-available 
+        {
+            color:green;
+
+        }
+        .status-not-available 
+        {
+            color:red;
+        }
+    }

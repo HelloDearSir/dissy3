@@ -83,7 +83,7 @@ if (isset($_POST["username"])) {
 		//$('#um').html('<img src="load.gif"> ');
 
 		if (users != '') {
-			$.post('checking.php', {
+			$.post('CheckingTutor.php', {
 					username: users
 				},
 				function(data) {
