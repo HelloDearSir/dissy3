@@ -14,10 +14,6 @@ if($_SESSION['login'] != "That GRRRRREAT") {
     <?php require 'headerlogin.php'?>
   
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
- <meta charset="utf-8">
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			  <script src="main.js"></script>
 
  
 
@@ -110,7 +106,7 @@ $("document").ready(function(event)
 	
    },
     function(data,status) {
-			alert(data);
+			//alert(data);
 			$("#message_text").val("");
 			document.getElementById("mainmessages").innerhtml += data;
 			

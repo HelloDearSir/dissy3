@@ -17,7 +17,7 @@
     <div class="row">
     <ul class="navbar-nav">
       <li>
-        <a class="nav-link" href="index.php">Home </a>
+        <a class="nav-link" href="#">Home </a>
       </li>
       <li>
         <a class="nav-link" href="login.php">  Log In</a>
